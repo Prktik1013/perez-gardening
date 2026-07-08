@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perez Gardening — Landscaping in Fullerton, CA</title>
+  <meta name="description" content="Perez Gardening — professional landscaping, maintenance, and installation in Fullerton, CA and Orange County. Call (714) 932-3724.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --moss-900: #1e2a1a;
+      --moss-800: #2d3d26;
+      --moss-700: #3d5234;
+      --moss-600: #4a6340;
+      --moss-500: #5c7a4e;
+      --moss-400: #7a9b68;
+      --moss-300: #a3c090;
+      --stone-50: #f6f4ef;
+      --stone-100: #ebe8e0;
+      --stone-200: #d4cfc4;
+      --stone-800: #2a2824;
+      --stone-900: #141310;
+      --blueprint: #4a7c9b;
+      --blueprint-dim: rgba(74, 124, 155, 0.35);
+      --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+      --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--stone-800);
+      background: var(--stone-50);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Blueprint grid texture */
+    .blueprint-bg {
+      position: relative;
+    }
+    .blueprint-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--blueprint-dim) 1px, transparent 1px),
+        linear-gradient(90deg, var(--blueprint-dim) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    /* Annotation lines */
+    .annotate {
+      position: relative;
+    }
+    .annotate::after {
+      content: attr(data-label);
+      position: absolute;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+      white-space: nowrap;
+    }
+    .annotate--tl::after { top: -1.25rem; left: 0; }
+    .annotate--br::after { bottom: -1.25rem; right: 0; }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin-inline: auto;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 0;
+      background: rgba(246, 244, 239, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(42, 40, 36, 0.06);
+      transition: box-shadow 0.3s var(--ease-out);
+    }
+    .header.scrolled { box-shadow: 0 4px 24px rgba(20, 19, 16, 0.08); }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: -0.03em;
+      color: var(--moss-800);
+      line-height: 1.1;
+    }
+    .logo span {
+      display: block;
+      font-weight: 400;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--moss-600);
+      margin-top: 0.15rem;
+    }
+
+    .header__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      background: var(--moss-700);
+      color: var(--stone-50);
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: -0.01em;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s var(--ease-out);
+    }
+    .header__cta:hover { background: var(--moss-800); transform: translateY(-1px); }
+    .header__cta svg { flex-shrink: 0; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: flex-end;
+      padding: 8rem 0 5rem;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+      will-change: transform;
+    }
+    .hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(165deg, rgba(30, 42, 26, 0.72) 0%, rgba(30, 42, 26, 0.45) 45%, rgba(20, 19, 16, 0.85) 100%),
+        linear-gradient(to top, var(--stone-900) 0%, transparent 35%);
+    }
+
+    .hero__diagonal {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: var(--stone-50);
+      clip-path: polygon(0 100%, 100% 0, 100% 100%);
+      z-index: 2;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 3;
+      width: min(1120px, 92vw);
+      margin-inline: auto;
+    }
+
+    .hero__locality {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--moss-300);
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out) 0.2s forwards;
+    }
+    .hero__locality::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--blueprint);
+    }
+
+    .hero__title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.75rem, 8vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--stone-50);
+      max-width: 14ch;
+      opacity: 0;
+      animation: fadeUp 0.9s var(--ease-out) 0.35s forwards;
+    }
+
+    .hero__sub {
+      margin-top: 1.5rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-weight: 400;
+      color: rgba(246, 244, 239, 0.78);
+      max-width: 38ch;
+      letter-spacing: -0.01em;
+      opacity: 0;
+      animation: fadeUp 0.9s var(--ease-out) 0.5s forwards;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.9s var(--ease-out) 0.65s forwards;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 1.75rem;
+      background: var(--moss-500);
+      color: var(--stone-50);
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.25s var(--ease-out), box-shadow 0.25s;
+      box-shadow: 0 4px 20px rgba(30, 42, 26, 0.35);
+    }
+    .btn-primary:hover {
+      background: var(--moss-400);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(30, 42, 26, 0.4);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      color: var(--stone-50);
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid rgba(246, 244, 239, 0.3);
+      border-radius: 2px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(246, 244, 239, 0.6);
+      background: rgba(246, 244, 239, 0.06);
+    }
+
+    .hero__coords {
+      position: absolute;
+      right: 4vw;
+      bottom: 8rem;
+      z-index: 3;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+      writing-mode: vertical-rl;
+      opacity: 0.7;
+      display: none;
+    }
+    @media (min-width: 900px) { .hero__coords { display: block; } }
+
+    /* Services strip */
+    .services {
+      padding: 5rem 0 4rem;
+      position: relative;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      letter-spacing: -0.03em;
+      color: var(--moss-800);
+      line-height: 1.1;
+      margin-bottom: 2.5rem;
+    }
+
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1px;
+      background: var(--stone-200);
+      border: 1px solid var(--stone-200);
+    }
+
+    .service-card {
+      background: var(--stone-50);
+      padding: 2rem 1.75rem;
+      position: relative;
+      transition: background 0.3s;
+    }
+    .service-card:hover { background: var(--stone-100); }
+
+    .service-card__num {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--blueprint);
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: var(--moss-800);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--stone-800);
+      opacity: 0.75;
+      line-height: 1.55;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--moss-500);
+      transition: width 0.4s var(--ease-out);
+    }
+    .service-card:hover::before { width: 100%; }
+
+    /* Gallery */
+    .gallery {
+      padding: 4rem 0 6rem;
+      background: var(--moss-900);
+      position: relative;
+      clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+      margin-top: -2rem;
+    }
+
+    .gallery .section-label { color: var(--moss-300); }
+    .gallery .section-title { color: var(--stone-50); }
+
+    .gallery__intro {
+      color: rgba(246, 244, 239, 0.65);
+      max-width: 42ch;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+    }
+
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .gallery__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .gallery__pair {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      background: var(--moss-800);
+    }
+
+    .gallery__item {
+      position: relative;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+    }
+
+    .gallery__frame {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      transform: scale(var(--gallery-zoom, 1));
+      transform-origin: var(--gallery-origin-x, 50%) var(--gallery-origin-y, 50%);
+      transition: transform 0.6s var(--ease-out);
+    }
+    .gallery__pair:hover .gallery__item img {
+      transform: scale(calc(var(--gallery-zoom, 1) * 1.04));
+    }
+
+    .gallery__tag {
+      position: absolute;
+      bottom: 0.75rem;
+      left: 0.75rem;
+      padding: 0.3rem 0.6rem;
+      background: rgba(20, 19, 16, 0.75);
+      backdrop-filter: blur(4px);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone-100);
+    }
+
+    .gallery__divider {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-12deg);
+      width: 2px;
+      height: 120%;
+      background: var(--blueprint);
+      opacity: 0.6;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .gallery__caption {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(163, 192, 144, 0.2);
+      font-size: 0.8rem;
+      color: rgba(246, 244, 239, 0.45);
+      letter-spacing: 0.02em;
+    }
+
+    /* Trust band */
+    .trust {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--stone-200);
+    }
+
+    .trust__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .trust__inner { grid-template-columns: 1fr 1fr; gap: 4rem; }
+    }
+
+    .trust__facts {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .trust__fact {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--stone-200);
+    }
+
+    .trust__fact dt {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+      min-width: 5rem;
+      flex-shrink: 0;
+    }
+
+    .trust__fact dd {
+      font-size: 0.95rem;
+      color: var(--stone-800);
+      letter-spacing: -0.01em;
+    }
+
+    .trust__callout {
+      background: var(--moss-800);
+      color: var(--stone-50);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trust__callout::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -20%;
+      width: 200px;
+      height: 200px;
+      border: 1px solid var(--blueprint);
+      border-radius: 50%;
+      opacity: 0.3;
+    }
+
+    .trust__callout h3 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+
+    .trust__callout p {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .trust__phone {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      letter-spacing: -0.03em;
+      color: var(--moss-300);
+      position: relative;
+      transition: color 0.2s;
+    }
+    .trust__phone:hover { color: var(--stone-50); }
+
+    /* Footer */
+    .footer {
+      padding: 3rem 0 6rem;
+      background: var(--stone-50);
+    }
+
+    .footer__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2rem;
+    }
+
+    .footer__brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.03em;
+      color: var(--moss-800);
+    }
+
+    .footer__meta {
+      font-size: 0.8rem;
+      color: var(--stone-800);
+      opacity: 0.55;
+      text-align: right;
+    }
+
+    .footer__meta a {
+      color: var(--blueprint);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Sticky mobile CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 0.75rem 1rem;
+      background: var(--moss-800);
+      border-top: 1px solid rgba(163, 192, 144, 0.15);
+      display: flex;
+      justify-content: center;
+      transform: translateY(100%);
+      transition: transform 0.4s var(--ease-out);
+    }
+    .sticky-cta.visible { transform: translateY(0); }
+
+    .sticky-cta a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      width: 100%;
+      max-width: 400px;
+      padding: 0.9rem 1.5rem;
+      background: var(--moss-500);
+      color: var(--stone-50);
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 2px;
+    }
+
+    @media (min-width: 768px) {
+      .sticky-cta { display: none; }
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero__locality, .hero__title, .hero__sub, .hero__actions { animation: none; opacity: 1; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero__bg img { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        Perez Gardening
+        <span>Fullerton, CA</span>
+      </a>
+      <a href="tel:+17149323724" class="header__cta" aria-label="Call Perez Gardening">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (714) 932-3724
+      </a>
+    </div>
+  </header>
+
+  <section class="hero blueprint-bg" aria-label="Introduction">
+    <div class="hero__bg" id="heroBg">
+      <img
+        src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnoAHaYYYBPsSSHlHPagJCdF7gKd0bIwslfxrzSkSMc5Iy7NLsqdhO_SvFZHxw3_splR4OwmFJTgHxonQGMPzBzEPlhGmZoxCKnAkiunBf8x8qRkvVg4bQtgjfnLEVB0fUdNhEw632rOsm=w1200-h800"
+        alt="Landscaping work by Perez Gardening in Fullerton"
+        width="1200" height="800"
+        fetchpriority="high"
+      >
+    </div>
+    <div class="hero__diagonal" aria-hidden="true"></div>
+    <p class="hero__coords" aria-hidden="true">33.64°N · 117.78°W</p>
+    <div class="hero__content">
+      <p class="hero__locality">Fullerton · Orange County</p>
+      <h1 class="hero__title">Grounds kept right.</h1>
+      <p class="hero__sub">Landscaping, maintenance, and installation for homes and properties across Fullerton and surrounding Orange County.</p>
+      <div class="hero__actions">
+        <a href="tel:+17149323724" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (714) 932-3724
+        </a>
+        <a href="#work" class="btn-ghost">See our work ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" aria-labelledby="services-heading">
+    <div class="container">
+      <p class="section-label reveal">What we do</p>
+      <h2 class="section-title reveal" id="services-heading">Three ways we<br>show up on site.</h2>
+      <div class="services__grid reveal">
+        <article class="service-card annotate" data-label="svc.01">
+          <p class="service-card__num">01</p>
+          <h3>Landscaping</h3>
+          <p>Design, planting, and hardscape — shaping outdoor spaces that hold up through Fullerton's seasons.</p>
+        </article>
+        <article class="service-card annotate" data-label="svc.02">
+          <p class="service-card__num">02</p>
+          <h3>Maintenance</h3>
+          <p>Regular mowing, trimming, and upkeep so your property stays clean without you chasing it down.</p>
+        </article>
+        <article class="service-card annotate" data-label="svc.03">
+          <p class="service-card__num">03</p>
+          <h3>Installation</h3>
+          <p>Turf, irrigation, and landscape installs done on schedule — ready when you need the job finished.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery blueprint-bg" id="work" aria-labelledby="gallery-heading">
+    <div class="container">
+      <p class="section-label reveal">Photo evidence</p>
+      <h2 class="section-title reveal" id="gallery-heading">Before &amp; after<br>from the field.</h2>
+      <div class="gallery__grid reveal">
+        <div class="gallery__pair">
+          <div class="gallery__divider" aria-hidden="true"></div>
+          <figure class="gallery__item">
+            <div class="gallery__frame">
+              <img
+                src="mrbefo7u-Screenshot_20260707-182321.png"
+                alt="River rock strip along fence and sidewalk"
+                width="600" height="400"
+                loading="lazy"
+                style="--gallery-zoom: 1.35; --gallery-origin-x: 50%; --gallery-origin-y: 28%; object-position: 50% 28%;"
+              >
+            </div>
+          </figure>
+          <figure class="gallery__item">
+            <div class="gallery__frame">
+              <img
+                src="mrbefo6p-Screenshot_20260707-182422.png"
+                alt="Finished pebble ground cover installation"
+                width="600" height="400"
+                loading="lazy"
+                style="--gallery-zoom: 1.25; --gallery-origin-x: 50%; --gallery-origin-y: 42%; object-position: 50% 42%;"
+              >
+            </div>
+          </figure>
+        </div>
+
+        <div class="gallery__pair">
+          <div class="gallery__divider" aria-hidden="true"></div>
+          <figure class="gallery__item">
+            <div class="gallery__frame">
+              <img
+                src="mrbefoaz-Screenshot_20260707-182248.png"
+                alt="Palm trees in front of residential property"
+                width="600" height="400"
+                loading="lazy"
+                style="--gallery-zoom: 1.15; --gallery-origin-x: 48%; --gallery-origin-y: 38%; object-position: 48% 38%;"
+              >
+            </div>
+          </figure>
+          <figure class="gallery__item">
+            <div class="gallery__frame">
+              <img
+                src="mrbefo9p-Screenshot_20260707-182306.png"
+                alt="Mature palm landscaping at residential home"
+                width="600" height="400"
+                loading="lazy"
+                style="--gallery-zoom: 1.12; --gallery-origin-x: 52%; --gallery-origin-y: 32%; object-position: 52% 32%;"
+              >
+            </div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust" aria-labelledby="trust-heading">
+    <div class="container trust__inner">
+      <div class="reveal">
+        <p class="section-label">Local &amp; reachable</p>
+        <h2 class="section-title" id="trust-heading">Fullerton-based.<br>One call away.</h2>
+        <dl class="trust__facts">
+          <div class="trust__fact">
+            <dt>Area</dt>
+            <dd>Fullerton, CA 92833 — Orange County and surrounding communities</dd>
+          </div>
+          <div class="trust__fact">
+            <dt>Services</dt>
+            <dd>Landscaping · Maintenance · Installation</dd>
+          </div>
+          <div class="trust__fact">
+            <dt>Find us</dt>
+            <dd><a href="https://www.google.com/maps/place/Perez+gardening/@34.2614476,-121.5345415,7z/data=!4m10!1m2!2m1!1sperez+gardening!3m6!1s0x80dd2b7c6fe8c503:0x40d03749469403fb!8m2!3d33.640814!4d-117.7803964!15sCg9wZXJleiBnYXJkZW5pbmdaESIPcGVyZXogZ2FyZGVuaW5nkgEIZ2FyZGVuZXKaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUmFPRTl0VlV4M0VBReABAPoBBAhSEB4!16s%2Fg%2F11h7vgpmqj?hl=en-MY&entry=ttu" target="_blank" rel="noopener noreferrer">View on Google Maps</a></dd>
+          </div>
+        </dl>
+      </div>
+      <aside class="trust__callout reveal">
+        <h3>Ready to start?</h3>
+        <p>Tell us what your property needs. We'll talk scope, timing, and next steps — no forms, no wait.</p>
+        <a href="tel:+17149323724" class="trust__phone">(714) 932-3724</a>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand">Perez Gardening</p>
+      <p class="footer__meta">
+        Fullerton, California<br>
+        <a href="tel:+17149323724">(714) 932-3724</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Quick call button">
+    <a href="tel:+17149323724">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Tap to call (714) 932-3724
+    </a>
+  </div>
+
+  <script>
+    (function () {
+      var header = document.getElementById('header');
+      var sticky = document.getElementById('stickyCta');
+      var heroBg = document.getElementById('heroBg');
+      var heroImg = heroBg && heroBg.querySelector('img');
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      window.addEventListener('scroll', function () {
+        var y = window.scrollY;
+        header.classList.toggle('scrolled', y > 40);
+        sticky.classList.toggle('visible', y > 400);
+        if (!reduced && heroImg) {
+          heroImg.style.transform = 'scale(1.05) translateY(' + (y * 0.18) + 'px)';
+        }
+      }, { passive: true });
+
+      if ('IntersectionObserver' in window && !reduced) {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
+      } else {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+      }
+
+    })();
+  </script>
+</body>
+</html>
