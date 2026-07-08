@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-rf-demo="1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Perez Gardening | Fullerton Landscaping Quote</title>
+  <meta name="description" content="Request a landscaping quote in Fullerton CA. Call (714) 932-3724 or send property details to Perez Gardening.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://Prktik1013.github.io/perez-gardening/contact.html">
+  <meta property="og:title" content="Contact | Perez Gardening Fullerton">
+  <meta property="og:description" content="Call or request a quote for landscaping and maintenance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://Prktik1013.github.io/perez-gardening/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --moss-900:#1e2a1a; --moss-800:#2d3d26; --moss-700:#3d5234; --moss-600:#4a6340;
+      --stone-50:#f6f4ef; --stone-100:#ebe8e0; --stone-200:#d4cfc4; --stone-800:#2a2824;
+      --blueprint:#4a7c9b;
+      --font-d:"Bricolage Grotesque",system-ui,sans-serif; --font-b:"IBM Plex Sans",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font-b);background:var(--stone-50);color:var(--stone-800);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(720px,92vw);margin-inline:auto}
+    header{padding:1rem 0;border-bottom:1px solid rgba(42,40,36,.08);background:rgba(246,244,239,.95)}
+    .header__inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .logo{font-family:var(--font-d);font-weight:800;font-size:1.05rem;color:var(--moss-800)}
+    .logo span{display:block;font-weight:400;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--moss-600)}
+    .nav{display:flex;gap:1rem;font-size:.88rem;font-weight:600;color:var(--moss-700);flex-wrap:wrap}
+    .cta{background:var(--moss-700);color:#fff;padding:.65rem 1.1rem;font-weight:600;border-radius:2px;font-size:.9rem}
+    main{padding:3rem 0 4rem}
+    .label{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blueprint);margin-bottom:.6rem}
+    h1{font-family:var(--font-d);font-weight:800;font-size:clamp(1.9rem,4.5vw,2.6rem);letter-spacing:-.03em;color:var(--moss-900);margin-bottom:.75rem}
+    .lead{max-width:48ch;margin-bottom:1.5rem;opacity:.9}
+    form{display:grid;gap:.85rem}
+    .row{display:grid;gap:.85rem}
+    @media(min-width:640px){.row{grid-template-columns:1fr 1fr}}
+    label{display:grid;gap:.35rem;font-size:.9rem;font-weight:600}
+    input,textarea,select{width:100%;padding:.7rem .8rem;min-height:48px;border:1px solid var(--stone-200);border-radius:2px;font:inherit;background:#fff}
+    .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+    button{justify-self:start;min-height:52px;padding:0 1.4rem;border:0;border-radius:2px;background:var(--moss-700);color:#fff;font:inherit;font-weight:700;cursor:pointer}
+    .note{font-size:.9rem;color:var(--moss-700);min-height:1.25rem}
+    footer{padding:2rem 0;border-top:1px solid var(--stone-200);font-size:.9rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header__inner">
+      <a class="logo" href="index.html">Perez Gardening<span>Fullerton, CA</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#work">Our work</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <a class="cta" href="tel:+17149323724">(714) 932-3724</a>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <p class="label">Contact</p>
+      <h1>Request a landscaping quote</h1>
+      <p class="lead">Prefer to talk? Call <a href="tel:+17149323724" style="font-weight:700;color:var(--moss-800)">(714) 932-3724</a>. Or send details - property address and what you need help with.</p>
+      <form id="rf-crm-form">
+        <div class="row">
+          <label>Name<input name="name" required autocomplete="name"></label>
+          <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+        </div>
+        <label>Email (optional)<input name="email" type="email" autocomplete="email"></label>
+        <label>Property address<input name="address" autocomplete="street-address" placeholder="Street, Fullerton or nearby"></label>
+        <label>What do you need?
+          <select name="service_type" required>
+            <option value="">Select…</option>
+            <option value="maintenance">Regular maintenance / route</option>
+            <option value="install">Install (turf, irrigation, hardscape)</option>
+            <option value="cleanup">One-time cleanup</option>
+            <option value="landscaping">Full landscaping project</option>
+            <option value="other">Other / not sure</option>
+          </select>
+        </label>
+        <label>Details<textarea name="message" rows="3" required placeholder="Lot size, timeline, or what is going wrong with the yard"></textarea></label>
+        <label class="hp" aria-hidden="true">Company<input name="company" tabindex="-1" autocomplete="off"></label>
+        <input type="hidden" name="source" value="website-contact">
+        <button type="submit">Send message</button>
+        <p class="note" id="rf-crm-note" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p><strong>Perez Gardening</strong> · Fullerton CA · <a href="tel:+17149323724">(714) 932-3724</a></p>
+      <p style="margin-top:.5rem"><a href="https://www.google.com/maps/place/Perez+gardening/@33.640814,-117.7803964,17z/data=!4m6!3m5!1s0x80dd2b7c6fe8c503:0x40d03749469403fb!8m2!3d33.640814!4d-117.7803964!16s%2Fg%2F11h7vgpmqj?entry=ttu" target="_blank" rel="noopener noreferrer">Google Maps</a>
+        · <a href="https://www.yelp.com/biz/perez-gardening-fullerton" target="_blank" rel="noopener noreferrer">Yelp</a></p>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var RF_LEAD_ENDPOINT = 'https://formsubmit.co/ajax/kingsinv@proton.me';
+      var form = document.getElementById('rf-crm-form');
+      var note = document.getElementById('rf-crm-note');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if ((form.querySelector('[name=company]') || {}).value) { note.textContent = 'Thanks.'; return; }
+        var btn = form.querySelector('button[type=submit]');
+        var data = {};
+        new FormData(form).forEach(function (v, k) { if (k !== 'company') data[k] = v; });
+        var msg = [data.service_type ? ('Service: ' + data.service_type) : '', data.address ? ('Address: ' + data.address) : '', data.message || ''].filter(Boolean).join('\n');
+        if (btn) btn.disabled = true;
+        note.textContent = 'Sending...';
+        fetch(RF_LEAD_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ _subject: 'New lead - Perez Gardening', name: data.name, phone: data.phone, email: data.email || '', message: msg, _template: 'table' })
+        }).then(function (r) {
+          if (!r.ok) throw new Error('fail');
+          note.textContent = 'Thanks - we got it. Call (714) 932-3724 anytime.';
+          form.reset();
+          if (btn) btn.disabled = false;
+        }).catch(function () {
+          note.textContent = 'Something went wrong. Please call (714) 932-3724.';
+          if (btn) btn.disabled = false;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

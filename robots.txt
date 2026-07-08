@@ -1,0 +1,5 @@
+# Demo preview: meta robots noindex is also set on pages.
+# After sale (public deploy), remove noindex from HTML; keep Allow for indexing.
+User-agent: *
+Allow: /
+Sitemap: https://Prktik1013.github.io/perez-gardening/sitemap.xml

@@ -4,6 +4,8 @@
 !index.html
 !404.html
 !robots.txt
+!sitemap.xml
+!*.html
 !*.jpg
 !*.jpeg
 !*.png
@@ -19,3 +21,6 @@
 !assets/**
 build-output.log
 *.log
+*backup*
+*-backup*
+index.redesign-backup.html
