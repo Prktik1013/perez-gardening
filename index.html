@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perez Gardening — Landscaping in Fullerton, CA</title>
-  <meta name="description" content="Perez Gardening — professional landscaping, maintenance, and installation in Fullerton, CA and Orange County. Call (714) 932-3724.">
+  <title>Perez Gardening  -  Landscaping in Fullerton, CA</title>
+  <meta name="description" content="Perez Gardening  -  professional landscaping, maintenance, and installation in Fullerton, CA and Orange County. Call (714) 932-3724.">
+  <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://Prktik1013.github.io/perez-gardening">
   <meta property="og:title" content="Perez Gardening | Fullerton">
   <meta property="og:description" content="Perez Gardening in Fullerton. Call (714) 932-3724.">
@@ -713,9 +714,9 @@
       >
     </div>
     <div class="hero__diagonal" aria-hidden="true"></div>
-    <p class="hero__coords" aria-hidden="true">33.64°N · 117.78°W</p>
+    <p class="hero__coords" aria-hidden="true">33.64°N  |  117.78°W</p>
     <div class="hero__content">
-      <p class="hero__locality">Fullerton · Orange County</p>
+      <p class="hero__locality">Fullerton  |  Orange County</p>
       <h1 class="hero__title">Grounds kept right.</h1>
       <p class="hero__sub">Landscaping, maintenance, and installation for homes and properties across Fullerton and surrounding Orange County.</p>
       <div class="hero__actions">
@@ -736,7 +737,7 @@
         <article class="service-card annotate" data-label="svc.01">
           <p class="service-card__num">01</p>
           <h3>Landscaping</h3>
-          <p>Design, planting, and hardscape — shaping outdoor spaces that hold up through Fullerton's seasons.</p>
+          <p>Design, planting, and hardscape  -  shaping outdoor spaces that hold up through Fullerton's seasons.</p>
         </article>
         <article class="service-card annotate" data-label="svc.02">
           <p class="service-card__num">02</p>
@@ -746,7 +747,7 @@
         <article class="service-card annotate" data-label="svc.03">
           <p class="service-card__num">03</p>
           <h3>Installation</h3>
-          <p>Turf, irrigation, and landscape installs done on schedule — ready when you need the job finished.</p>
+          <p>Turf, irrigation, and landscape installs done on schedule  -  ready when you need the job finished.</p>
         </article>
       </div>
     </div>
@@ -820,11 +821,11 @@
         <dl class="trust__facts">
           <div class="trust__fact">
             <dt>Area</dt>
-            <dd>Fullerton, CA 92833 — Orange County and surrounding communities</dd>
+            <dd>Fullerton, CA 92833  -  Orange County and surrounding communities</dd>
           </div>
           <div class="trust__fact">
             <dt>Services</dt>
-            <dd>Landscaping · Maintenance · Installation</dd>
+            <dd>Landscaping  |  Maintenance  |  Installation</dd>
           </div>
           <div class="trust__fact">
             <dt>Find us</dt>
@@ -834,7 +835,7 @@
       </div>
       <aside class="trust__callout reveal">
         <h3>Ready to start?</h3>
-        <p>Tell us what your property needs. We'll talk scope, timing, and next steps — no forms, no wait.</p>
+        <p>Tell us what your property needs. We'll talk scope, timing, and next steps  -  no forms, no wait.</p>
         <a href="tel:+17149323724" class="trust__phone">(714) 932-3724</a>
       </aside>
     </div>
@@ -848,7 +849,7 @@
       <p>Tell us about your property. Perez personally reviews every message and will call you back with scope, timing, and next steps.</p>
       <aside class="rf-ghost" role="note" data-rf-module="ghost-lead-catcher">
         <p class="rf-ghost__mark" aria-hidden="true">&#10003;</p>
-        <p class="rf-ghost__line"><strong>We reply within one business day.</strong> If we're ever slower, the owner of Perez Gardening follows up personally â€” your message won't sit in a queue.</p>
+        <p class="rf-ghost__line"><strong>We reply within one business day.</strong> If we're ever slower, the owner of Perez Gardening follows up personally  -  your message won't sit in a queue.</p>
       </aside>
       <section id="contact-day" class="rf-crm" data-rf-module="crm-sheet-connector">
         <form id="rf-crm-form" class="rf-crm__form">
@@ -890,6 +891,42 @@
       var heroBg = document.getElementById('heroBg');
       var heroImg = heroBg && heroBg.querySelector('img');
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* CRM sheet-connector: demo phase routes leads to the ReviveForge operator inbox.
+         At handoff, swap RF_LEAD_ENDPOINT to the client's own endpoint (one line). */
+      var RF_LEAD_ENDPOINT = 'https://formsubmit.co/ajax/kingsinv@proton.me';
+      var crmForm = document.getElementById('rf-crm-form');
+      var crmNote = document.getElementById('rf-crm-note');
+      if (crmForm) {
+        crmForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var btn = crmForm.querySelector('button[type="submit"]');
+          var data = {};
+          new FormData(crmForm).forEach(function (v, k) { data[k] = v; });
+          if (btn) { btn.disabled = true; }
+          if (crmNote) { crmNote.textContent = 'Sending...'; }
+          fetch(RF_LEAD_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+              _subject: 'New lead - Perez Gardening',
+              name: data.name,
+              phone: data.phone,
+              email: data.email,
+              message: data.message,
+              _template: 'table'
+            })
+          }).then(function (resp) {
+            if (!resp.ok) { throw new Error('lead endpoint ' + resp.status); }
+            if (btn) { btn.disabled = false; }
+            if (crmNote) { crmNote.textContent = 'Thanks. We will be in touch within one business day.'; }
+            crmForm.reset();
+          }).catch(function () {
+            if (btn) { btn.disabled = false; }
+            if (crmNote) { crmNote.textContent = 'Something went wrong. Please call (714) 932-3724.'; }
+          });
+        });
+      }
 
       window.addEventListener('scroll', function () {
         var y = window.scrollY;
