@@ -1,0 +1,7 @@
+{
+    "designReady":  ".\\scripts\\run-od-mark-design-ready.ps1 -Slug perez-gardening",
+    "nextCommand":  ".\\scripts\\run-od-commission.ps1 -Slug perez-gardening",
+    "status": "research-complete",
+    "handback":  ".\\scripts\\run-od-handback.ps1 -Slug perez-gardening -Package -Deploy",
+    "slug":  "perez-gardening"
+}
