@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-rf-build-mode="od-primary-surgical">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Perez Gardening | landscaper in Fullerton CA</title>
-  <meta name="description" content="Landscaping, lawn maintenance, and installation in Fullerton, CA. Residential and commercial. Call (714) 932-3724.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perez Gardening — Landscaping in Fullerton, CA</title>
+  <meta name="description" content="Perez Gardening — professional landscaping, maintenance, and installation in Fullerton, CA and Orange County. Call (714) 932-3724.">
   <link rel="canonical" href="https://Prktik1013.github.io/perez-gardening">
   <meta property="og:title" content="Perez Gardening | Fullerton">
   <meta property="og:description" content="Perez Gardening in Fullerton. Call (714) 932-3724.">
@@ -14,855 +14,654 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-      <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Perez Gardening","telephone":"(714) 932-3724","address":{"@type":"PostalAddress","addressLocality":"Fullerton","addressRegion":"CA"}}
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      color-scheme: light;
-
-      --bg:             oklch(97.5% 0.002 0);
-      --bg-elevated:    oklch(94% 0.003 0);
-      --surface:        oklch(100% 0 0);
-      --surface-raised: oklch(100% 0 0);
-      --fg:             oklch(10% 0 0);
-      --muted:          oklch(30% 0.01 0);
-      --border:         oklch(82% 0.005 0);
-      --border-subtle:  oklch(88% 0.004 0);
-      --accent:         oklch(48% 0.14 145);
-      --accent-dk:      oklch(38% 0.13 145);
-      --accent-glow:    oklch(48% 0.14 145 / 0.18);
-      --brand:          oklch(4% 0 0);
-      --brand-mid:      oklch(12% 0.02 145);
-      --on-brand:       oklch(98% 0 0);
-      --on-dark-muted:  oklch(88% 0 0);
-      --on-dark-link:   oklch(86% 0.10 145);
-      --on-dark-link-h: oklch(93% 0.08 145);
-
-      --rf-brand:        var(--brand);
-      --rf-brand-ink:    var(--brand);
-      --rf-accent:       var(--accent);
-      --rf-ink:          var(--fg);
-      --rf-muted:        var(--muted);
-      --rf-surface:      var(--surface);
-      --rf-surface-2:    oklch(93% 0.004 0);
-      --rf-line:         var(--border);
-      --rf-on-brand:     var(--on-brand);
-      --rf-highlight:    none;
-
-      --rf-font-display: "Bebas Neue", "Barlow Condensed", "Barlow", ui-sans-serif, system-ui, sans-serif;
-      --rf-font-body:    "Barlow", ui-sans-serif, system-ui, sans-serif;
-      --rf-weight-display: 400;
-      --rf-weight-strong:  600;
-      --rf-weight-body:    400;
-
-      --rf-step--1: clamp(0.875rem, 0.84rem + 0.15vw, 0.975rem);
-      --rf-step-0:  clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
-      --rf-step-1:  clamp(1.125rem, 1.05rem + 0.35vw, 1.35rem);
-      --rf-step-2:  clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
-      --rf-step-3:  clamp(1.75rem, 1.45rem + 1.1vw, 2.35rem);
-      --rf-step-4:  clamp(2.1rem, 1.75rem + 1.6vw, 3.1rem);
-      --rf-leading-tight: 1.2;
-      --rf-leading-body:  1.65;
-
-      --rf-space-1: 0.25rem;
-      --rf-space-2: 0.5rem;
-      --rf-space-3: 0.75rem;
-      --rf-space-4: 1rem;
-      --rf-space-5: 1.5rem;
-      --rf-space-6: 2rem;
-      --rf-space-7: 3rem;
-      --rf-space-8: 4.5rem;
-      --rf-space-9: 7rem;
-
-      --rf-radius:    2px;
-      --rf-radius-lg: 3px;
-      --rf-shadow:    0 2px 0 oklch(0% 0 0 / 0.08);
-      --rf-shadow-sm: 0 1px 0 oklch(0% 0 0 / 0.06);
-      --rf-shadow-lg: 0 4px 0 oklch(0% 0 0 / 0.12),
-                      0 0 0 1px oklch(48% 0.12 145 / 0.15);
-      --rf-maxw:      1120px;
-      --rf-measure:   58ch;
-      --rf-tap:       44px;
-      --header-h:     72px;
-
-      --motion-ease:  cubic-bezier(0.32, 0.72, 0, 1);
-      --motion-fast:  180ms;
-      --motion-med:   420ms;
-      --motion-slow:  680ms;
+      --moss-900: #1e2a1a;
+      --moss-800: #2d3d26;
+      --moss-700: #3d5234;
+      --moss-600: #4a6340;
+      --moss-500: #5c7a4e;
+      --moss-400: #7a9b68;
+      --moss-300: #a3c090;
+      --stone-50: #f6f4ef;
+      --stone-100: #ebe8e0;
+      --stone-200: #d4cfc4;
+      --stone-800: #2a2824;
+      --stone-900: #141310;
+      --blueprint: #4a7c9b;
+      --blueprint-dim: rgba(74, 124, 155, 0.35);
+      --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+      --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 1rem); }
+    html { scroll-behavior: smooth; }
+
     body {
-      margin: 0;
-      color: var(--rf-ink);
-      background: var(--bg);
-      font-family: var(--rf-font-body);
-      font-size: var(--rf-step-0);
-      line-height: var(--rf-leading-body);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--stone-800);
+      background: var(--stone-50);
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    h1, h2 {
-      font-family: var(--rf-font-display);
-      line-height: 1.05;
-      color: var(--rf-ink);
-      margin: 0 0 var(--rf-space-4);
-      font-weight: var(--rf-weight-display);
-      letter-spacing: 0.02em;
-      text-transform: none;
-      text-wrap: balance;
-    }
-    h1 { font-size: var(--rf-step-4); }
-    h2 { font-size: var(--rf-step-3); line-height: 1.08; }
-    h3 {
-      font-size: var(--rf-step-1);
-      font-family: var(--rf-font-body);
-      font-weight: var(--rf-weight-strong);
-      line-height: var(--rf-leading-tight);
-      text-transform: none;
-      letter-spacing: 0.01em;
-      color: var(--rf-ink);
-      margin: 0 0 var(--rf-space-4);
-    }
-    p { margin: 0 0 var(--rf-space-4); max-width: var(--rf-measure); text-wrap: pretty; }
-    a { color: var(--accent-dk); }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
 
-    .rf-container {
-      width: 100%;
-      max-width: var(--rf-maxw);
-      margin-inline: auto;
-      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
-    }
-    .rf-section {
-      padding-block: clamp(3.5rem, 8vw, 5.5rem);
+    /* Blueprint grid texture */
+    .blueprint-bg {
       position: relative;
     }
-    .rf-section > .rf-container > p:not(.section-lead):not(.rf-eyebrow) {
-      color: var(--muted);
-      font-size: var(--rf-step-0);
-      line-height: var(--rf-leading-body);
-    }
-    .rf-section--alt {
-      background: oklch(94% 0.003 0);
-      border-block: 2px solid var(--border);
-    }
-    .rf-eyebrow {
-      text-transform: none;
-      letter-spacing: 0.01em;
-      font-size: var(--rf-step-0);
-      color: var(--accent);
-      font-weight: 500;
-      margin-bottom: var(--rf-space-3);
-    }
-    .section-lead {
-      font-size: var(--rf-step-0);
-      font-weight: 500;
-      text-transform: none;
-      letter-spacing: 0.01em;
-      color: var(--accent-dk);
-      margin: 0 0 var(--rf-space-2);
-    }
-
-    :focus { outline: none; }
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-    }
-    .skip-link {
+    .blueprint-bg::before {
+      content: '';
       position: absolute;
-      top: -100%;
-      left: var(--rf-space-4);
-      z-index: 100;
-      padding: var(--rf-space-3) var(--rf-space-4);
-      background: var(--surface);
-      color: var(--rf-ink);
-      font-weight: var(--rf-weight-strong);
-      text-decoration: none;
-      border-radius: var(--rf-radius);
-      box-shadow: var(--rf-shadow);
-    }
-    .skip-link:focus { top: var(--rf-space-4); }
-
-    .rf-btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.5em;
-      min-height: var(--rf-tap); padding: 0 var(--rf-space-5);
-      border-radius: var(--rf-radius); border: 1px solid transparent;
-      font: inherit; font-weight: var(--rf-weight-strong); font-size: var(--rf-step-0); text-decoration: none; cursor: pointer;
-      text-transform: none;
-      letter-spacing: 0.01em;
-      transition: transform var(--motion-fast) var(--motion-ease),
-                  background var(--motion-fast) ease,
-                  box-shadow var(--motion-fast) var(--motion-ease),
-                  color var(--motion-fast) ease,
-                  opacity var(--motion-fast) ease;
-    }
-    .rf-btn:hover { transform: none; }
-    .rf-btn:active { transform: scale(0.98); }
-    .rf-btn:disabled, .rf-btn.is-loading {
-      opacity: 0.72;
-      cursor: wait;
-      transform: none;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--blueprint-dim) 1px, transparent 1px),
+        linear-gradient(90deg, var(--blueprint-dim) 1px, transparent 1px);
+      background-size: 24px 24px;
       pointer-events: none;
+      opacity: 0.4;
     }
-    .rf-btn--primary { background: var(--accent); color: var(--on-brand); }
-    .rf-btn--primary:hover {
-      background: var(--accent-dk);
-      box-shadow: 0 3px 0 oklch(0% 0 0 / 0.25);
+
+    /* Annotation lines */
+    .annotate {
+      position: relative;
     }
-    .rf-btn--ghost { background: transparent; color: var(--rf-ink); border-color: var(--rf-line); }
-    .rf-btn--ghost:hover { border-color: var(--accent); color: var(--accent-dk); }
-    .rf-btn--on-dark { background: var(--accent); color: var(--on-brand); }
-    .rf-btn--on-dark-ghost {
-      background: oklch(100% 0 0 / 0.08);
-      color: var(--on-brand);
-      border-color: oklch(100% 0 0 / 0.2);
+    .annotate::after {
+      content: attr(data-label);
+      position: absolute;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+      white-space: nowrap;
     }
-    .rf-btn--on-dark-ghost:hover { background: oklch(100% 0 0 / 0.14); border-color: oklch(100% 0 0 / 0.35); }
-    .rf-btn--lg { min-height: 52px; font-size: var(--rf-step-0); padding-inline: var(--rf-space-6); }
-    .rf-btn--block { width: 100%; }
+    .annotate--tl::after { top: -1.25rem; left: 0; }
+    .annotate--br::after { bottom: -1.25rem; right: 0; }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin-inline: auto;
+    }
 
     /* Header */
-    .site-header {
-      position: sticky;
+    .header {
+      position: fixed;
       top: 0;
-      z-index: 50;
-      height: var(--header-h);
-      background: oklch(100% 0 0 / 0.97);
-      border-bottom: 2px solid var(--brand);
-      transition: box-shadow var(--motion-med) var(--motion-ease),
-                  border-color var(--motion-med) var(--motion-ease),
-                  background var(--motion-med) var(--motion-ease);
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 0;
+      background: rgba(246, 244, 239, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(42, 40, 36, 0.06);
+      transition: box-shadow 0.3s var(--ease-out);
     }
-    .site-header.is-scrolled {
-      background: oklch(100% 0 0 / 0.98);
-      box-shadow: 0 3px 0 oklch(0% 0 0 / 0.1);
-      border-bottom-color: var(--accent);
-    }
-    .site-header__inner {
-      max-width: var(--rf-maxw);
-      margin-inline: auto;
-      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
-      height: 100%;
+    .header.scrolled { box-shadow: 0 4px 24px rgba(20, 19, 16, 0.08); }
+
+    .header__inner {
       display: flex;
       align-items: center;
-      gap: var(--rf-space-5);
+      justify-content: space-between;
+      gap: 1.5rem;
     }
-    .site-header__logo {
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      line-height: 1.15;
-      flex-shrink: 0;
+
+    .logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: -0.03em;
+      color: var(--moss-800);
+      line-height: 1.1;
     }
-    .site-header__name {
-      font-family: var(--rf-font-display);
-      font-size: 1.45rem;
-      font-weight: var(--rf-weight-display);
-      color: var(--rf-brand-ink);
-      letter-spacing: 0.04em;
-      text-transform: none;
-      line-height: 1;
+    .logo span {
+      display: block;
+      font-weight: 400;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--moss-600);
+      margin-top: 0.15rem;
     }
-    .site-header__tag {
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-transform: none;
-      letter-spacing: 0.02em;
-      color: var(--accent-dk);
-    }
-    .site-header__nav {
-      display: none;
-      align-items: center;
-      gap: var(--rf-space-5);
-      margin-left: auto;
-    }
-    @media (min-width: 768px) {
-      .site-header__nav { display: flex; }
-    }
-    .site-header__nav a {
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-transform: none;
-      letter-spacing: 0;
-      color: oklch(32% 0.01 0);
-      transition: color var(--motion-fast) ease;
-      white-space: nowrap;
-    }
-    .site-header__nav a:hover { color: var(--rf-ink); }
-    .site-header__nav a:focus-visible { color: var(--accent-dk); }
-    .site-header__nav a.is-active { color: var(--accent); }
-    .site-header__cta {
+
+    .header__cta {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-height: var(--rf-tap);
-      padding: 0 var(--rf-space-4);
-      margin-left: auto;
-      background: var(--accent);
-      color: var(--on-brand);
-      text-decoration: none;
-      font-weight: var(--rf-weight-strong);
-      font-size: var(--rf-step-0);
-      border-radius: var(--rf-radius);
-      white-space: nowrap;
-      transition: transform var(--motion-fast) var(--motion-ease),
-                  background var(--motion-fast) ease,
-                  box-shadow var(--motion-fast) var(--motion-ease);
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      background: var(--moss-700);
+      color: var(--stone-50);
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: -0.01em;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s var(--ease-out);
     }
-    @media (min-width: 768px) {
-      .site-header__cta { margin-left: 0; }
-    }
-    .site-header__cta:hover {
-      background: var(--accent-dk);
-      box-shadow: 0 2px 0 oklch(0% 0 0 / 0.2);
-    }
-    .site-header__cta:focus-visible {
-      background: var(--accent-dk);
-      box-shadow: 0 0 0 3px var(--accent-glow);
-    }
+    .header__cta:hover { background: var(--moss-800); transform: translateY(-1px); }
+    .header__cta svg { flex-shrink: 0; }
 
     /* Hero */
     .hero {
       position: relative;
-      background: var(--brand);
-      color: var(--on-brand);
+      min-height: 100svh;
+      display: flex;
+      align-items: flex-end;
+      padding: 8rem 0 5rem;
       overflow: hidden;
-      padding-block: clamp(4.5rem, 12vw, 7.5rem) clamp(3.5rem, 8vw, 5.5rem);
     }
-    .hero::before {
-      content: "";
+
+    .hero__bg {
       position: absolute;
       inset: 0;
-      background: linear-gradient(160deg, oklch(50% 0.22 22 / 0.28) 0%, transparent 48%);
-      pointer-events: none;
+      z-index: 0;
     }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0 0;
-      height: 4px;
-      background: var(--accent);
-      pointer-events: none;
-    }
-    .hero__inner {
-      position: relative;
-      max-width: var(--rf-maxw);
-      margin-inline: auto;
-      padding-inline: clamp(1.5rem, 5vw, 2.75rem);
-    }
-    .hero .rf-eyebrow { color: oklch(82% 0.10 145); }
-    .hero__headline {
-      font-family: var(--rf-font-display);
-      font-size: clamp(2.35rem, 6vw, 3.75rem);
-      font-weight: var(--rf-weight-display);
-      line-height: 1.02;
-      letter-spacing: 0.03em;
-      text-transform: none;
-      color: var(--on-brand);
-      margin: 0 0 var(--rf-space-4);
-      max-width: min(22ch, 100%);
-    }
-    .hero__facts {
-      margin: 0 0 var(--rf-space-5);
-      padding: var(--rf-space-4) var(--rf-space-5);
-      font-size: var(--rf-step-0);
-      font-weight: 500;
-      line-height: 1.5;
-      color: oklch(92% 0 0);
-      background: oklch(100% 0 0 / 0.06);
-      border-left: 4px solid var(--accent);
-      max-width: 52ch;
-    }
-    .hero__facts strong {
-      color: var(--on-brand);
-      font-weight: var(--rf-weight-strong);
-    }
-    .trust-badges {
-      list-style: none;
-      margin: 0 0 var(--rf-space-5);
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 0.75rem;
-    }
-    .trust-badges li {
-      font-size: var(--rf-step--1);
-      font-weight: 500;
-      padding: 0.35rem 0.75rem;
-      background: oklch(100% 0 0 / 0.08);
-      border: 1px solid oklch(100% 0 0 / 0.14);
-      border-radius: var(--rf-radius);
-      color: oklch(92% 0 0);
-    }
-    .hero__sub {
-      color: oklch(91% 0 0);
-      font-size: var(--rf-step-0);
-      line-height: var(--rf-leading-body);
-      max-width: 54ch;
-      margin-bottom: var(--rf-space-6);
-    }
-    .hero__sub strong { color: var(--on-brand); font-weight: 500; }
-    .hero__cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--rf-space-3);
-    }
-
-    /* Services */
-    .svc-list {
-      display: grid;
-      gap: var(--rf-space-4);
-      margin-top: var(--rf-space-6);
-    }
-    @media (min-width: 640px) {
-      .svc-list { grid-template-columns: 1fr 1fr; }
-    }
-    .svc-item {
-      padding: var(--rf-space-6);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--accent);
-      border-radius: var(--rf-radius);
-      background: var(--surface);
-      box-shadow: var(--rf-shadow-sm);
-      transition: box-shadow var(--motion-fast) var(--motion-ease),
-                  border-color var(--motion-fast) ease,
-                  background-color var(--motion-fast) ease;
-    }
-    .svc-item:hover {
-      border-color: oklch(72% 0.1 22);
-      box-shadow: var(--rf-shadow-lg);
-    }
-    .svc-item__icon {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-      color: var(--accent);
-      margin-top: 0.1em;
-    }
-    .svc-item__icon svg {
-      width: 22px;
-      height: 22px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .svc-item__head {
-      display: flex;
-      align-items: center;
-      gap: var(--rf-space-3);
-      margin-bottom: var(--rf-space-3);
-    }
-    .svc-item__head h3 { margin: 0; }
-    .svc-item p { color: var(--muted); margin: 0; font-size: var(--rf-step-0); line-height: 1.65; max-width: none; }
-
-    /* Reviews */
-    .quote-wall {
-      display: grid;
-      gap: var(--rf-space-5);
-      margin-top: var(--rf-space-6);
-    }
-    @media (min-width: 768px) {
-      .quote-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (min-width: 1024px) {
-      .quote-wall { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    }
-    .quote-card {
-      position: relative;
-      padding: var(--rf-space-6);
-      padding-top: calc(var(--rf-space-6) + 0.35rem);
-      border-radius: var(--rf-radius);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent);
-      box-shadow: var(--rf-shadow-sm);
-      transition: box-shadow var(--motion-fast) var(--motion-ease),
-                  border-color var(--motion-fast) ease;
-    }
-    .quote-card::before {
-      content: "\201C";
-      position: absolute;
-      top: var(--rf-space-4);
-      left: var(--rf-space-5);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 2.25rem;
-      line-height: 1;
-      color: var(--accent-dk);
-      opacity: 0.45;
-      pointer-events: none;
-    }
-    .quote-card:hover {
-      border-color: oklch(78% 0.08 22);
-      box-shadow: var(--rf-shadow-lg);
-    }
-    .quote-card blockquote {
-      margin: 0;
-      padding-left: 1.25rem;
-      font-size: var(--rf-step-0);
-      line-height: 1.65;
-      color: var(--rf-ink);
-      font-style: normal;
-    }
-    .quote-card cite {
-      display: block;
-      margin-top: var(--rf-space-4);
-      font-size: var(--rf-step-0);
-      color: var(--muted);
-      font-style: normal;
-      font-weight: 500;
-    }
-    .quote-card cite::before {
-      content: " |  ";
-      color: var(--accent-dk);
-    }
-
-    /* Ghost lead catcher */
-    .rf-ghost {
-      display: flex; gap: var(--rf-space-3); align-items: flex-start;
-      max-width: 44rem; padding: var(--rf-space-5);
-      border: 2px solid var(--border);
-      border-radius: var(--rf-radius);
-      background: oklch(97% 0.004 22);
-      box-shadow: var(--rf-shadow-sm);
-      margin-bottom: var(--rf-space-5);
-    }
-    .rf-ghost__mark {
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: var(--rf-radius);
-      background: var(--accent);
-      color: var(--on-brand);
-      font-size: 0.85rem;
-      font-weight: var(--rf-weight-strong);
-      flex-shrink: 0;
-    }
-    .rf-ghost__line { margin: 0; color: var(--rf-ink); font-size: var(--rf-step-0); line-height: 1.65; max-width: none; }
-
-    /* Forms */
-    .rf-crm__form, .rf-afterhours__form {
-      display: grid; gap: var(--rf-space-4); max-width: 40rem; margin-top: var(--rf-space-5);
-    }
-    .rf-crm__form label, .rf-afterhours__form label {
-      display: grid; gap: var(--rf-space-2); font-weight: 500; font-size: var(--rf-step-0);
-    }
-    .rf-crm__form input, .rf-crm__form textarea,
-    .rf-afterhours__form input, .rf-afterhours__form textarea {
-      font: inherit; padding: var(--rf-space-3) var(--rf-space-4); min-height: var(--rf-tap);
-      border: 1px solid var(--border); border-radius: var(--rf-radius);
-      background: oklch(100% 0 0);
-      color: var(--rf-ink);
-      box-shadow: inset 0 1px 3px oklch(0% 0 0 / 0.04);
-      transition: border-color var(--motion-fast) ease,
-                  box-shadow var(--motion-fast) var(--motion-ease),
-                  background var(--motion-fast) ease;
-    }
-    .rf-crm__form input::placeholder,
-    .rf-afterhours__form input::placeholder,
-    .rf-crm__form textarea::placeholder,
-    .rf-afterhours__form textarea::placeholder {
-      color: oklch(42% 0.01 0);
-    }
-    .rf-crm__form input.is-invalid,
-    .rf-afterhours__form input.is-invalid,
-    .rf-crm__form textarea.is-invalid,
-    .rf-afterhours__form textarea.is-invalid {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px var(--accent-glow);
-    }
-    .rf-crm__note.is-error, .rf-afterhours__note.is-error {
-      color: var(--accent-dk);
-      font-weight: 500;
-    }
-    .rf-crm__note.rf-note-success, .rf-afterhours__note.rf-note-success {
-      color: oklch(32% 0.12 145);
-      font-weight: 500;
-    }
-    .rf-crm__form input:focus, .rf-crm__form textarea:focus,
-    .rf-afterhours__form input:focus, .rf-afterhours__form textarea:focus {
-      border-color: var(--accent);
-      background: oklch(100% 0 0);
-      box-shadow:
-        inset 0 1px 3px oklch(0% 0 0 / 0.03),
-        0 0 0 3px var(--accent-glow);
-      transform: none;
-    }
-    .rf-crm__form input:focus-visible, .rf-crm__form textarea:focus-visible,
-    .rf-afterhours__form input:focus-visible, .rf-afterhours__form textarea:focus-visible {
-      outline: none;
-    }
-    .rf-crm__row, .rf-afterhours__row { display: grid; gap: var(--rf-space-4); }
-    @media (min-width: 640px) {
-      .rf-crm__row, .rf-afterhours__row { grid-template-columns: 1fr 1fr; }
-    }
-    .rf-crm__note, .rf-afterhours__note { color: var(--muted); font-size: var(--rf-step-0); line-height: 1.6; margin: 0; }
-    .rf-afterhours__sub { color: var(--muted); max-width: 52ch; }
-
-    .hours-grid {
-      display: grid; gap: 0;
-      font-size: var(--rf-step-0);
-      margin-top: var(--rf-space-4);
-      max-width: 28rem;
-      border: 1px solid oklch(0% 0 0 / 0.06);
-      border-radius: var(--rf-radius-lg);
-      overflow: hidden;
-      background: var(--surface);
-      background-image: var(--rf-highlight);
-      box-shadow: var(--rf-shadow-sm);
-    }
-    .hours-grid div {
-      display: flex; justify-content: space-between;
-      padding: var(--rf-space-3) var(--rf-space-4);
-      border-bottom: 1px solid oklch(0% 0 0 / 0.04);
-    }
-    .hours-grid div:nth-child(odd) { background: oklch(95% 0.003 0); }
-    .hours-grid div:last-child { border-bottom: none; }
-    .hours-grid span:first-child { font-weight: 500; }
-
-    .map-link {
-      display: inline-flex; align-items: center; gap: var(--rf-space-2);
-      font-weight: var(--rf-weight-strong); margin-top: var(--rf-space-5);
-      text-decoration: none;
-      color: var(--accent-dk);
-      text-transform: none;
-      letter-spacing: 0.01em;
-      font-size: var(--rf-step-0);
-      transition: color var(--motion-fast) ease;
-    }
-    .map-link:hover { color: var(--accent); }
-
-    .hours-layout {
-      display: grid;
-      gap: var(--rf-space-6);
-      margin-top: var(--rf-space-5);
-    }
-    @media (min-width: 768px) {
-      .hours-layout {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-        align-items: start;
-      }
-    }
-    .map-embed {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      border-radius: var(--rf-radius-lg);
-      overflow: hidden;
-      border: 1px solid oklch(0% 0 0 / 0.08);
-      box-shadow: var(--rf-shadow);
-      background: var(--bg-elevated);
-    }
-    .map-embed iframe {
-      position: absolute;
-      inset: 0;
+    .hero__bg img {
       width: 100%;
       height: 100%;
-      border: 0;
+      object-fit: cover;
+      transform: scale(1.05);
+      will-change: transform;
+    }
+    .hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(165deg, rgba(30, 42, 26, 0.72) 0%, rgba(30, 42, 26, 0.45) 45%, rgba(20, 19, 16, 0.85) 100%),
+        linear-gradient(to top, var(--stone-900) 0%, transparent 35%);
     }
 
-    .site-footer {
-      padding-block: var(--rf-space-7);
-      border-top: 4px solid var(--accent);
-      font-size: var(--rf-step-0);
-      line-height: var(--rf-leading-body);
-      background: var(--brand);
-      color: oklch(90% 0 0);
-    }
-    .site-footer a {
-      color: var(--on-dark-link);
-      font-weight: var(--rf-weight-strong);
-      text-decoration: underline;
-      text-underline-offset: 0.15em;
-    }
-    .site-footer a:hover { color: var(--on-dark-link-h); }
-    .site-footer p { margin: 0 0 var(--rf-space-3); max-width: none; }
-    .site-footer strong { color: var(--on-brand); font-weight: var(--rf-weight-strong); }
-    .site-footer .footer-meta {
-      max-width: 72ch;
-      margin-bottom: var(--rf-space-5);
-      font-size: var(--rf-step-0);
-      line-height: 1.65;
-      color: oklch(85% 0 0);
-    }
-    .site-footer .footer-dev-note {
-      margin-top: var(--rf-space-4);
-      font-size: var(--rf-step--1);
-      line-height: 1.65;
-      color: oklch(78% 0 0);
-    }
-    .site-footer .footer-dev-note code {
-      font-size: 0.92em;
-      color: oklch(90% 0 0);
-      font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    .hero__diagonal {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: var(--stone-50);
+      clip-path: polygon(0 100%, 100% 0, 100% 100%);
+      z-index: 2;
     }
 
-    .mobile-bar {
-      display: flex;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      z-index: 50;
-      background: var(--brand);
-      padding: var(--rf-space-3);
-      gap: var(--rf-space-3);
-      border-top: 3px solid var(--accent);
-      box-shadow: 0 -4px 0 oklch(0% 0 0 / 0.3);
+    .hero__content {
+      position: relative;
+      z-index: 3;
+      width: min(1120px, 92vw);
+      margin-inline: auto;
     }
-    @media (min-width: 768px) { .mobile-bar { display: none; } }
-    .mobile-bar a {
-      flex: 1;
-      text-align: center;
-      text-decoration: none;
-      font-weight: var(--rf-weight-strong);
-      text-transform: none;
-      letter-spacing: 0.01em;
-      font-size: var(--rf-step-0);
-      min-height: var(--rf-tap);
-      display: flex; align-items: center; justify-content: center;
-      border-radius: var(--rf-radius);
-      transition: background var(--motion-fast) ease;
-    }
-    .mobile-bar a:active { opacity: 0.85; }
-    .mobile-bar a:focus-visible {
-      outline: 2px solid var(--on-brand);
-      outline-offset: 2px;
-    }
-    .mobile-bar__call { background: var(--accent); color: var(--on-brand); }
-    .mobile-bar__form { background: oklch(100% 0 0 / 0.1); color: var(--on-brand); }
 
-    .rf-chat-launcher {
-      position: fixed;
-      right: 1.25rem;
-      bottom: 5.5rem;
-      z-index: 90;
+    .hero__locality {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.75rem 1rem;
-      background: var(--accent);
-      color: var(--on-brand);
-      font-weight: var(--rf-weight-strong);
-      font-size: var(--rf-step--1);
-      text-decoration: none;
-      border-radius: 999px;
-      box-shadow: var(--rf-shadow-lg);
-      border: 1px solid oklch(100% 0 0 / 0.12);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--moss-300);
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out) 0.2s forwards;
     }
-    @media (min-width: 768px) {
-      .rf-chat-launcher { bottom: 1.5rem; }
+    .hero__locality::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--blueprint);
     }
 
-    main { padding-bottom: calc(var(--rf-space-8) + 60px); }
-    @media (min-width: 768px) { main { padding-bottom: var(--rf-space-8); } }
+    .hero__title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.75rem, 8vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--stone-50);
+      max-width: 14ch;
+      opacity: 0;
+      animation: fadeUp 0.9s var(--ease-out) 0.35s forwards;
+    }
 
-    .is-hidden {
+    .hero__sub {
+      margin-top: 1.5rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-weight: 400;
+      color: rgba(246, 244, 239, 0.78);
+      max-width: 38ch;
+      letter-spacing: -0.01em;
+      opacity: 0;
+      animation: fadeUp 0.9s var(--ease-out) 0.5s forwards;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.9s var(--ease-out) 0.65s forwards;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 1.75rem;
+      background: var(--moss-500);
+      color: var(--stone-50);
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.25s var(--ease-out), box-shadow 0.25s;
+      box-shadow: 0 4px 20px rgba(30, 42, 26, 0.35);
+    }
+    .btn-primary:hover {
+      background: var(--moss-400);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(30, 42, 26, 0.4);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      color: var(--stone-50);
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid rgba(246, 244, 239, 0.3);
+      border-radius: 2px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(246, 244, 239, 0.6);
+      background: rgba(246, 244, 239, 0.06);
+    }
+
+    .hero__coords {
+      position: absolute;
+      right: 4vw;
+      bottom: 8rem;
+      z-index: 3;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+      writing-mode: vertical-rl;
+      opacity: 0.7;
       display: none;
     }
-    .form-swap {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity var(--motion-med) var(--motion-ease),
-                  transform var(--motion-med) var(--motion-ease);
+    @media (min-width: 900px) { .hero__coords { display: block; } }
+
+    /* Services strip */
+    .services {
+      padding: 5rem 0 4rem;
+      position: relative;
     }
-    .form-swap.is-swapping-out {
-      opacity: 0;
-      transform: translateY(8px);
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      letter-spacing: -0.03em;
+      color: var(--moss-800);
+      line-height: 1.1;
+      margin-bottom: 2.5rem;
+    }
+
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1px;
+      background: var(--stone-200);
+      border: 1px solid var(--stone-200);
+    }
+
+    .service-card {
+      background: var(--stone-50);
+      padding: 2rem 1.75rem;
+      position: relative;
+      transition: background 0.3s;
+    }
+    .service-card:hover { background: var(--stone-100); }
+
+    .service-card__num {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--blueprint);
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: var(--moss-800);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--stone-800);
+      opacity: 0.75;
+      line-height: 1.55;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--moss-500);
+      transition: width 0.4s var(--ease-out);
+    }
+    .service-card:hover::before { width: 100%; }
+
+    /* Gallery */
+    .gallery {
+      padding: 4rem 0 6rem;
+      background: var(--moss-900);
+      position: relative;
+      clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+      margin-top: -2rem;
+    }
+
+    .gallery .section-label { color: var(--moss-300); }
+    .gallery .section-title { color: var(--stone-50); }
+
+    .gallery__intro {
+      color: rgba(246, 244, 239, 0.65);
+      max-width: 42ch;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+    }
+
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .gallery__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .gallery__pair {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      background: var(--moss-800);
+    }
+
+    .gallery__item {
+      position: relative;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+    }
+
+    .gallery__frame {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      transform: scale(var(--gallery-zoom, 1));
+      transform-origin: var(--gallery-origin-x, 50%) var(--gallery-origin-y, 50%);
+      transition: transform 0.6s var(--ease-out);
+    }
+    .gallery__pair:hover .gallery__item img {
+      transform: scale(calc(var(--gallery-zoom, 1) * 1.04));
+    }
+
+    .gallery__tag {
+      position: absolute;
+      bottom: 0.75rem;
+      left: 0.75rem;
+      padding: 0.3rem 0.6rem;
+      background: rgba(20, 19, 16, 0.75);
+      backdrop-filter: blur(4px);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone-100);
+    }
+
+    .gallery__divider {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-12deg);
+      width: 2px;
+      height: 120%;
+      background: var(--blueprint);
+      opacity: 0.6;
+      z-index: 2;
       pointer-events: none;
     }
-    .form-swap.is-swapping-in {
-      animation: form-in var(--motion-med) var(--motion-ease) both;
-    }
-    @keyframes form-in {
-      from { opacity: 0; transform: translateY(8px); }
-      to   { opacity: 1; transform: translateY(0); }
+
+    .gallery__caption {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(163, 192, 144, 0.2);
+      font-size: 0.8rem;
+      color: rgba(246, 244, 239, 0.45);
+      letter-spacing: 0.02em;
     }
 
-    .rf-note-success {
-      animation: note-in var(--motion-med) var(--motion-ease) both;
-    }
-    @keyframes note-in {
-      from { opacity: 0; transform: translateY(6px); }
-      to   { opacity: 1; transform: translateY(0); }
+    /* Trust band */
+    .trust {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--stone-200);
     }
 
-    .stagger-list .svc-item,
-    .stagger-list .quote-card {
-      transition: opacity var(--motion-med) var(--motion-ease),
-                  transform var(--motion-med) var(--motion-ease),
-                  box-shadow var(--motion-fast) var(--motion-ease),
-                  border-color var(--motion-fast) ease;
+    .trust__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .trust__inner { grid-template-columns: 1fr 1fr; gap: 4rem; }
     }
 
-    @media (prefers-reduced-motion: no-preference) {
-      .hero-stagger:not(.is-ready) > * {
-        opacity: 0;
-        transform: translateY(14px);
-      }
-      .hero-stagger.is-ready > * {
-        opacity: 1;
-        transform: translateY(0);
-        transition: opacity var(--motion-slow) var(--motion-ease),
-                    transform var(--motion-slow) var(--motion-ease);
-      }
-      .hero-stagger.is-ready > *:nth-child(1) { transition-delay: 0ms; }
-      .hero-stagger.is-ready > *:nth-child(2) { transition-delay: 60ms; }
-      .hero-stagger.is-ready > *:nth-child(3) { transition-delay: 120ms; }
-      .hero-stagger.is-ready > *:nth-child(4) { transition-delay: 180ms; }
-      .hero-stagger.is-ready > *:nth-child(5) { transition-delay: 240ms; }
-      .hero-stagger.is-ready > *:nth-child(6) { transition-delay: 300ms; }
-      .hero-stagger.is-ready > *:nth-child(7) { transition-delay: 360ms; }
-
-      .stagger-list:not(.is-visible) .svc-item,
-      .stagger-list:not(.is-visible) .quote-card {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-      .stagger-list.is-visible .svc-item,
-      .stagger-list.is-visible .quote-card {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .trust__facts {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
     }
-    .stagger-list.is-visible .svc-item:nth-child(1) { transition-delay: 0ms; }
-    .stagger-list.is-visible .svc-item:nth-child(2) { transition-delay: 60ms; }
-    .stagger-list.is-visible .svc-item:nth-child(3) { transition-delay: 120ms; }
-    .stagger-list.is-visible .svc-item:nth-child(4) { transition-delay: 180ms; }
-    .stagger-list.is-visible .quote-card:nth-child(1) { transition-delay: 0ms; }
-    .stagger-list.is-visible .quote-card:nth-child(2) { transition-delay: 80ms; }
-    .stagger-list.is-visible .quote-card:nth-child(3) { transition-delay: 160ms; }
+
+    .trust__fact {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--stone-200);
+    }
+
+    .trust__fact dt {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+      min-width: 5rem;
+      flex-shrink: 0;
+    }
+
+    .trust__fact dd {
+      font-size: 0.95rem;
+      color: var(--stone-800);
+      letter-spacing: -0.01em;
+    }
+
+    .trust__callout {
+      background: var(--moss-800);
+      color: var(--stone-50);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trust__callout::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -20%;
+      width: 200px;
+      height: 200px;
+      border: 1px solid var(--blueprint);
+      border-radius: 50%;
+      opacity: 0.3;
+    }
+
+    .trust__callout h3 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+
+    .trust__callout p {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .trust__phone {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      letter-spacing: -0.03em;
+      color: var(--moss-300);
+      position: relative;
+      transition: color 0.2s;
+    }
+    .trust__phone:hover { color: var(--stone-50); }
+
+    /* Footer */
+    .footer {
+      padding: 3rem 0 6rem;
+      background: var(--stone-50);
+    }
+
+    .footer__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2rem;
+    }
+
+    .footer__brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.03em;
+      color: var(--moss-800);
+    }
+
+    .footer__meta {
+      font-size: 0.8rem;
+      color: var(--stone-800);
+      opacity: 0.55;
+      text-align: right;
+    }
+
+    .footer__meta a {
+      color: var(--blueprint);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Sticky mobile CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      padding: 0.75rem 1rem;
+      background: var(--moss-800);
+      border-top: 1px solid rgba(163, 192, 144, 0.15);
+      display: flex;
+      justify-content: center;
+      transform: translateY(100%);
+      transition: transform 0.4s var(--ease-out);
+    }
+    .sticky-cta.visible { transform: translateY(0); }
+
+    .sticky-cta a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      width: 100%;
+      max-width: 400px;
+      padding: 0.9rem 1.5rem;
+      background: var(--moss-500);
+      color: var(--stone-50);
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 2px;
+    }
+
+    @media (min-width: 768px) {
+      .sticky-cta { display: none; }
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .rf-btn, .site-header, .site-header__cta, .site-header__nav a,
-      .svc-item, .quote-card, .map-link, .mobile-bar a, .hero-stagger > *,
-      .form-swap, .rf-crm__form input, .rf-crm__form textarea,
-      .rf-afterhours__form input, .rf-afterhours__form textarea {
-        transition: none !important;
-        animation: none !important;
-        transform: none !important;
-        opacity: 1 !important;
-      }
-      .is-hidden { display: none !important; }
-      .stagger-list .svc-item,
-      .stagger-list .quote-card { opacity: 1 !important; transform: none !important; }
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      .mobile-bar {
-        transform: translateY(100%);
-        animation: bar-in var(--motion-med) var(--motion-ease) 400ms forwards;
-      }
-      @keyframes bar-in {
-        to { transform: translateY(0); }
-      }
+      .hero__locality, .hero__title, .hero__sub, .hero__actions { animation: none; opacity: 1; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero__bg img { transform: none; }
     }
       .rf-ship-contact { padding: clamp(3rem, 8vw, 5rem) 0; }
     .rf-ship-contact .rf-ship-inner { width: min(720px, 92vw); margin-inline: auto; }
@@ -884,456 +683,165 @@
       border: none; font: inherit; font-weight: 600; cursor: pointer; }
     .rf-crm__note { margin: 0; font-size: 0.9rem; min-height: 1.25rem; }
   </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Perez Gardening","telephone":"(714) 932-3724","address":{"@type":"PostalAddress","addressLocality":"Fullerton","addressRegion":"CA"}}
+  </script>
 </head>
-<body class="rf-scope">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" aria-label="Site header">
-    <div class="site-header__inner">
-      <a class="site-header__logo" href="#main">
-        <span class="site-header__name">Perez</span>
-        <span class="site-header__tag">Gardening</span>
+<body>
+  <main id="main">
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        Perez Gardening
+        <span>Fullerton, CA</span>
       </a>
-      <nav class="site-header__nav" aria-label="Page sections">
-        <a href="#proof">Proof</a>
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-        <a href="#hours">Hours</a>
-      </nav>
-      <a class="site-header__cta" href="tel:+17149323724">(714) 932-3724</a>
+      <a href="tel:+17149323724" class="header__cta" aria-label="Call Perez Gardening">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (714) 932-3724
+      </a>
     </div>
   </header>
 
-  <main id="main">
-    <!-- Hero -->
-    <section id="hero" class="hero hero-stagger" data-od-id="hero">
-      <div class="hero__inner">
-        <p class="rf-eyebrow">Fullerton, CA  |  Landscaping &amp; maintenance</p>
-        <h1 class="hero__headline">Perez Gardening</h1>
-        <p class="hero__facts"><strong>Fullerton local</strong>  |  <strong>Residential &amp; commercial</strong>  |  <strong>Before/after proof</strong> on Google Maps</p>
-        <ul class="trust-badges" aria-label="Trust highlights">
-          <li>✓ Orange County service area</li>
-          <li>✓ Lawn, garden &amp; install</li>
-          <li>✓ Call or request callback</li>
-        </ul>
-        <p class="hero__sub"><strong>Call first.</strong> Tell us what your yard needs — mowing, cleanup, planting, or a full refresh. We'll talk scope and timing before we show up.</p>
-        <div class="hero__cta">
-          <a class="rf-btn rf-btn--on-dark rf-btn--lg" href="tel:+17149323724">Call (714) 932-3724</a>
-          <a class="rf-btn rf-btn--on-dark-ghost rf-btn--lg" href="#contact">Request callback</a>
-        </div>
+  <section class="hero blueprint-bg" aria-label="Introduction">
+    <div class="hero__bg" id="heroBg">
+      <img
+        src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnoAHaYYYBPsSSHlHPagJCdF7gKd0bIwslfxrzSkSMc5Iy7NLsqdhO_SvFZHxw3_splR4OwmFJTgHxonQGMPzBzEPlhGmZoxCKnAkiunBf8x8qRkvVg4bQtgjfnLEVB0fUdNhEw632rOsm=w1200-h800"
+        alt="Landscaping work by Perez Gardening in Fullerton"
+        width="1200" height="800"
+        fetchpriority="high"
+      >
+    </div>
+    <div class="hero__diagonal" aria-hidden="true"></div>
+    <p class="hero__coords" aria-hidden="true">33.64°N · 117.78°W</p>
+    <div class="hero__content">
+      <p class="hero__locality">Fullerton · Orange County</p>
+      <h1 class="hero__title">Grounds kept right.</h1>
+      <p class="hero__sub">Landscaping, maintenance, and installation for homes and properties across Fullerton and surrounding Orange County.</p>
+      <div class="hero__actions">
+        <a href="tel:+17149323724" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (714) 932-3724
+        </a>
+        <a href="#work" class="btn-ghost">See our work ↓</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Proof -->
-    <section id="proof" class="rf-section" data-od-id="proof">
-      <style>
-        [data-od-id="proof"] {
-          padding-block: clamp(2.5rem, 6vw, 4rem);
-          background: var(--surface);
-          border-block: 2px solid var(--border);
-        }
-        [data-od-id="proof"] .proof-shell {
-          display: grid;
-          gap: clamp(2rem, 5vw, 3.5rem);
-        }
-        @media (min-width: 768px) {
-          [data-od-id="proof"] .proof-shell {
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-            align-items: start;
-          }
-        }
-        [data-od-id="proof"] .proof-rating {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: baseline;
-          gap: 0.35rem 0.75rem;
-          margin: 0 0 1rem;
-          font-family: var(--rf-font-body);
-          font-size: clamp(1.65rem, 4vw, 2.25rem);
-          font-weight: var(--rf-weight-strong);
-          line-height: 1.25;
-          letter-spacing: -0.01em;
-          text-transform: none;
-          color: var(--fg);
-          font-variant-numeric: tabular-nums;
-        }
-        [data-od-id="proof"] .proof-rating__stars {
-          color: var(--accent);
-          letter-spacing: 0.02em;
-        }
-        [data-od-id="proof"] .proof-rating__count {
-          font-size: var(--rf-step-0);
-          font-weight: 500;
-          color: oklch(28% 0.01 0);
-        }
-        [data-od-id="proof"] .proof-lead {
-          margin: 0;
-          max-width: 42ch;
-          font-size: var(--rf-step-0);
-          line-height: 1.65;
-          color: var(--rf-ink);
-        }
-        [data-od-id="proof"] .proof-facts {
-          list-style: none;
-          margin: 1.5rem 0 0;
-          padding: 0;
-          display: grid;
-          gap: 0.75rem;
-        }
-        [data-od-id="proof"] .proof-facts li {
-          display: block;
-          padding: 1rem 1.15rem;
-          font-size: var(--rf-step-0);
-          line-height: 1.6;
-          background: var(--bg);
-          border: 1px solid var(--border);
-          border-left: 4px solid var(--accent);
-          border-radius: var(--rf-radius);
-          box-shadow: var(--rf-shadow-sm);
-        }
-        [data-od-id="proof"] .proof-fact__body {
-          display: block;
-        }
-        [data-od-id="proof"] .proof-fact__title {
-          display: block;
-          font-size: var(--rf-step-0);
-          font-weight: var(--rf-weight-strong);
-          color: var(--rf-ink);
-          line-height: 1.4;
-          margin-bottom: 0.25rem;
-        }
-        [data-od-id="proof"] .proof-fact__text {
-          display: block;
-          font-size: var(--rf-step--1);
-          color: oklch(32% 0.01 0);
-          line-height: 1.6;
-        }
-        [data-od-id="proof"] .proof-aside {
-          padding: clamp(1.5rem, 3.5vw, 2rem);
-          background: var(--brand);
-          color: var(--on-brand);
-          border: 1px solid oklch(100% 0 0 / 0.1);
-          border-radius: var(--rf-radius);
-          box-shadow: var(--rf-shadow), inset 0 4px 0 var(--accent);
-        }
-        [data-od-id="proof"] .proof-aside h2 {
-          font-family: var(--rf-font-body);
-          font-size: var(--rf-step-1);
-          font-weight: var(--rf-weight-strong);
-          line-height: 1.35;
-          letter-spacing: 0;
-          text-transform: none;
-          color: var(--on-brand);
-          margin-bottom: 0.75rem;
-        }
-        [data-od-id="proof"] .proof-aside p {
-          margin: 0 0 1rem;
-          max-width: none;
-        }
-        [data-od-id="proof"] .proof-aside p:last-child {
-          margin-bottom: 0;
-        }
-        [data-od-id="proof"] .proof-aside__call {
-          font-size: var(--rf-step-0);
-          line-height: 1.65;
-          font-weight: 500;
-          color: oklch(96% 0 0);
-        }
-        [data-od-id="proof"] .proof-aside__meta {
-          font-size: var(--rf-step--1);
-          line-height: 1.65;
-          font-weight: 500;
-          color: oklch(88% 0 0);
-        }
-        [data-od-id="proof"] .proof-aside strong {
-          color: var(--on-brand);
-          font-weight: var(--rf-weight-strong);
-        }
-        [data-od-id="proof"] .proof-aside a {
-          font-weight: var(--rf-weight-strong);
-          text-decoration: underline;
-          text-underline-offset: 0.15em;
-          color: var(--on-dark-link);
-        }
-        [data-od-id="proof"] .proof-aside a:hover {
-          color: var(--on-dark-link-h);
-        }
-
-          .rf-ship-contact { padding: clamp(3rem, 8vw, 5rem) 0; }
-    .rf-ship-contact .rf-ship-inner { width: min(720px, 92vw); margin-inline: auto; }
-    .rf-ship-contact h2 { margin: 0.5rem 0 1rem; font-size: clamp(1.5rem, 4vw, 2rem); }
-    .rf-ship-contact p { margin: 0 0 1.25rem; max-width: 52ch; }
-    .rf-ghost { display: flex; gap: 0.75rem; align-items: flex-start; max-width: 44rem; margin: 0 0 1.5rem;
-      padding: 1rem 1.25rem; border: 1px solid currentColor; border-left: 4px solid currentColor;
-      border-radius: 8px; opacity: 0.92; }
-    .rf-ghost__mark { margin: 0; font-size: 1.1rem; line-height: 1.2; }
-    .rf-ghost__line { margin: 0; font-size: 0.95rem; line-height: 1.6; }
-    .rf-crm__form { display: grid; gap: 0.85rem; max-width: 36rem; }
-    .rf-crm__row { display: grid; gap: 0.85rem; }
-    @media (min-width: 640px) { .rf-crm__row { grid-template-columns: 1fr 1fr; } }
-    .rf-crm__form label { display: grid; gap: 0.35rem; font-size: 0.9rem; }
-    .rf-crm__form input, .rf-crm__form textarea {
-      width: 100%; padding: 0.65rem 0.75rem; border: 1px solid currentColor; border-radius: 6px;
-      font: inherit; background: transparent; }
-    .rf-crm__form button { justify-self: start; padding: 0.75rem 1.25rem; border-radius: 6px;
-      border: none; font: inherit; font-weight: 600; cursor: pointer; }
-    .rf-crm__note { margin: 0; font-size: 0.9rem; min-height: 1.25rem; }
-  </style>
-      <div class="rf-container">
-        <div class="proof-shell">
-          <div>
-            <p class="proof-rating" aria-label="Verified on Google Maps">
-              <span class="proof-rating__stars" aria-hidden="true">★★★★★</span>
-              <span>Google Maps</span>
-              <span class="proof-rating__count">verified listing · real job photos</span>
-            </p>
-            <p class="proof-lead">Fullerton homeowners call Perez for lawns that stay clean, yards that look finished, and a crew that picks up the phone.</p>
-            <ul class="proof-facts">
-              <li>
-                <div class="proof-fact__body">
-                  <span class="proof-fact__title">Landscaping &amp; design</span>
-                  <span class="proof-fact__text">Planting, hardscape, and outdoor spaces built for Orange County seasons.</span>
-                </div>
-              </li>
-              <li>
-                <div class="proof-fact__body">
-                  <span class="proof-fact__title">Weekly maintenance</span>
-                  <span class="proof-fact__text">Mowing, trimming, and cleanup so you are not chasing the yard every weekend.</span>
-                </div>
-              </li>
-              <li>
-                <div class="proof-fact__body">
-                  <span class="proof-fact__title">Install &amp; refresh</span>
-                  <span class="proof-fact__text">Turf, irrigation, and landscape installs on a schedule you can plan around.</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <aside class="proof-aside" aria-labelledby="proof-heading">
-            <h2 id="proof-heading">What neighbors already know</h2>
-            <p class="proof-aside__call">Before we quote, call <a href="tel:+17149323724">(714) 932-3724</a>. Tell us the property, the problem, and when you need it handled.</p>
-            <p class="proof-aside__meta"><strong>Fullerton, CA 92833</strong>  |  Orange County service area<br>Daily <strong>7:00am – 7:00pm</strong> per public listings</p>
-          </aside>
-        </div>
+  <section class="services" aria-labelledby="services-heading">
+    <div class="container">
+      <p class="section-label reveal">What we do</p>
+      <h2 class="section-title reveal" id="services-heading">Three ways we<br>show up on site.</h2>
+      <div class="services__grid reveal">
+        <article class="service-card annotate" data-label="svc.01">
+          <p class="service-card__num">01</p>
+          <h3>Landscaping</h3>
+          <p>Design, planting, and hardscape — shaping outdoor spaces that hold up through Fullerton's seasons.</p>
+        </article>
+        <article class="service-card annotate" data-label="svc.02">
+          <p class="service-card__num">02</p>
+          <h3>Maintenance</h3>
+          <p>Regular mowing, trimming, and upkeep so your property stays clean without you chasing it down.</p>
+        </article>
+        <article class="service-card annotate" data-label="svc.03">
+          <p class="service-card__num">03</p>
+          <h3>Installation</h3>
+          <p>Turf, irrigation, and landscape installs done on schedule — ready when you need the job finished.</p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Services -->
-    <section id="services" class="rf-section rf-section--alt" data-od-id="services">
-      <div class="rf-container">
-        <p class="section-lead">What we do</p>
-        <h2>Landscaping services</h2>
-        <p>From weekly upkeep to full-yard refreshes — one crew, clear scope, no runaround.</p>
-        <div class="svc-list stagger-list">
-          <article class="svc-item">
-            <div class="svc-item__head">
-              <div class="svc-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
-              <h3>Lawn maintenance</h3>
+  <section class="gallery blueprint-bg" id="work" aria-labelledby="gallery-heading">
+    <div class="container">
+      <p class="section-label reveal">Photo evidence</p>
+      <h2 class="section-title reveal" id="gallery-heading">Before &amp; after<br>from the field.</h2>
+      <div class="gallery__grid reveal">
+        <div class="gallery__pair">
+          <div class="gallery__divider" aria-hidden="true"></div>
+          <figure class="gallery__item">
+            <div class="gallery__frame">
+              <img
+                src="mrbefo7u-Screenshot_20260707-182321.png"
+                alt="River rock strip along fence and sidewalk"
+                width="600" height="400"
+                loading="lazy"
+                style="--gallery-zoom: 1.35; --gallery-origin-x: 50%; --gallery-origin-y: 28%; object-position: 50% 28%;"
+              >
             </div>
-            <p>Mowing, edging, and seasonal cleanup that keeps curb appeal consistent.</p>
-          </article>
-          <article class="svc-item">
-            <div class="svc-item__head">
-              <div class="svc-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-              <h3>Landscape design</h3>
-            </div>
-            <p>Planting, beds, and layout work that fits Fullerton lots and HOA expectations.</p>
-          </article>
-          <article class="svc-item">
-            <div class="svc-item__head">
-              <div class="svc-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6l1 4H8l1-4z"/><path d="M6 7h12v14H6z"/><path d="M10 11h4M10 15h4"/></svg></div>
-              <h3>Installation</h3>
-            </div>
-            <p>Turf, irrigation, and hardscape installs scheduled start to finish.</p>
-          </article>
-          <article class="svc-item">
-            <div class="svc-item__head">
-              <div class="svc-item__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 16l4-8h8l4 8"/><path d="M6 16h12"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
-              <h3>Commercial properties</h3>
-            </div>
-            <p>Storefronts, rentals, and small commercial grounds on recurring maintenance.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Before / after gallery -->
-    <section id="work" class="rf-section" data-od-id="work">
-      <style>
-        [data-od-id="work"] .gallery-grid {
-          display: grid;
-          gap: var(--rf-space-5);
-        }
-        @media (min-width: 768px) {
-          [data-od-id="work"] .gallery-grid { grid-template-columns: 1fr 1fr; }
-        }
-        [data-od-id="work"] .gallery-pair {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: var(--rf-space-3);
-          border: 2px solid var(--border);
-          background: var(--surface);
-          padding: var(--rf-space-3);
-          box-shadow: var(--rf-shadow-sm);
-        }
-        [data-od-id="work"] figure { margin: 0; position: relative; }
-        [data-od-id="work"] img {
-          width: 100%;
-          aspect-ratio: 4/3;
-          object-fit: cover;
-          border-radius: var(--rf-radius);
-        }
-        [data-od-id="work"] .gallery-tag {
-          position: absolute;
-          left: 0.5rem;
-          bottom: 0.5rem;
-          font-size: 0.7rem;
-          font-weight: 600;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          padding: 0.25rem 0.5rem;
-          background: var(--brand);
-          color: var(--on-brand);
-        }
-          .rf-ship-contact { padding: clamp(3rem, 8vw, 5rem) 0; }
-    .rf-ship-contact .rf-ship-inner { width: min(720px, 92vw); margin-inline: auto; }
-    .rf-ship-contact h2 { margin: 0.5rem 0 1rem; font-size: clamp(1.5rem, 4vw, 2rem); }
-    .rf-ship-contact p { margin: 0 0 1.25rem; max-width: 52ch; }
-    .rf-ghost { display: flex; gap: 0.75rem; align-items: flex-start; max-width: 44rem; margin: 0 0 1.5rem;
-      padding: 1rem 1.25rem; border: 1px solid currentColor; border-left: 4px solid currentColor;
-      border-radius: 8px; opacity: 0.92; }
-    .rf-ghost__mark { margin: 0; font-size: 1.1rem; line-height: 1.2; }
-    .rf-ghost__line { margin: 0; font-size: 0.95rem; line-height: 1.6; }
-    .rf-crm__form { display: grid; gap: 0.85rem; max-width: 36rem; }
-    .rf-crm__row { display: grid; gap: 0.85rem; }
-    @media (min-width: 640px) { .rf-crm__row { grid-template-columns: 1fr 1fr; } }
-    .rf-crm__form label { display: grid; gap: 0.35rem; font-size: 0.9rem; }
-    .rf-crm__form input, .rf-crm__form textarea {
-      width: 100%; padding: 0.65rem 0.75rem; border: 1px solid currentColor; border-radius: 6px;
-      font: inherit; background: transparent; }
-    .rf-crm__form button { justify-self: start; padding: 0.75rem 1.25rem; border-radius: 6px;
-      border: none; font: inherit; font-weight: 600; cursor: pointer; }
-    .rf-crm__note { margin: 0; font-size: 0.9rem; min-height: 1.25rem; }
-  </style>
-      <div class="rf-container">
-        <p class="section-lead">Photo evidence</p>
-        <h2>Before &amp; after from the field</h2>
-        <p>Real project photos from our verified Google Maps listing — no stock yards.</p>
-        <div class="gallery-grid stagger-list">
-          <div class="gallery-pair">
-            <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnoAHaYYYBPsSSHlHPagJCdF7gKd0bIwslfxrzSkSMc5Iy7NLsqdhO_SvFZHxw3_splR4OwmFJTgHxonQGMPzBzEPlhGmZoxCKnAkiunBf8x8qRkvVg4bQtgjfnLEVB0fUdNhEw632rOsm=w800-h600" alt="Landscaping project before" loading="lazy" width="600" height="450"><span class="gallery-tag">Before</span></figure>
-            <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEOwFr2HIMLOf_vDf3vbquVbCfMj7bWRVekZLUkn_ndneescxYuAlo1lSotAyDcRFj62aDjLKtQL_-omNCG6HNuTYzWe-GxHyWV-_8xhmm00qP4ozVU-gK3DwN2itSw6l6ILR_1vOpQS-r0=w800-h600" alt="Landscaping project after" loading="lazy" width="600" height="450"><span class="gallery-tag">After</span></figure>
-          </div>
-          <div class="gallery-pair">
-            <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFo0QcIWbTqMMQQqIFlEh7codaMnvkLOwq0HiP9ZjX3oaWLUNl68My24EQtZ0PQmVstfHwsHvOs-bk1ZDNW5HRtqPRju3xv2cRRPRZdDWNycrFXGQEReUfsUZLfVv6Aaap1Mt_AYB7XpcFI=w800-h600" alt="Garden maintenance before" loading="lazy" width="600" height="450"><span class="gallery-tag">Before</span></figure>
-            <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGC_u-paFVaRY85ORbWO6eT3_QnsR2R6QTNLDnhg1ZV5UL1rMM3a1knI-vXbvmw3-njDlyV0c6lX9G_ylcZqYhmDjERVxCc_roeiHisbk8E_ILb6NkP5B4Z7Vle2y_XZv7WASxvk8jkT2j-=w800-h600" alt="Garden maintenance after" loading="lazy" width="600" height="450"><span class="gallery-tag">After</span></figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews -->
-    <section id="reviews" class="rf-section" data-od-id="reviews">
-      <div class="rf-container">
-        <p class="section-lead">Social proof</p>
-        <h2>Trusted locally</h2>
-        <p>Read homeowner feedback on Google Maps and Yelp — we link straight to the verified listing.</p>
-        <div class="quote-wall stagger-list">
-          <figure class="quote-card">
-            <blockquote>Listed on Google Maps, Yelp, and Facebook as Perez Gardening — Fullerton, CA.</blockquote>
-            <cite>Public listings</cite>
           </figure>
-          <figure class="quote-card">
-            <blockquote>Before/after photos on this page come from the Google Maps listing — real jobs, not stock imagery.</blockquote>
-            <cite>Photo evidence</cite>
+          <figure class="gallery__item">
+            <div class="gallery__frame">
+              <img
+                src="mrbefo6p-Screenshot_20260707-182422.png"
+                alt="Finished pebble ground cover installation"
+                width="600" height="400"
+                loading="lazy"
+                style="--gallery-zoom: 1.25; --gallery-origin-x: 50%; --gallery-origin-y: 42%; object-position: 50% 42%;"
+              >
+            </div>
           </figure>
-          <figure class="quote-card">
-            <blockquote>Call <a href="tel:+17149323724">(714) 932-3724</a> or leave a callback request — we reply within one business day.</blockquote>
-            <cite><a href="https://www.google.com/maps/place/Perez+gardening/@34.2614476,-121.5345415,7z/data=!4m10!1m2!2m1!1sperez+gardening!3m6!1s0x80dd2b7c6fe8c503:0x40d03749469403fb!8m2!3d33.640814!4d-117.7803964!15sCg9wZXJleiBnYXJkZW5pbmdaESIPcGVyZXogZ2FyZGVuaW5nkgEIZ2FyZGVuZXKaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUmFPRTl0VlV4M0VBReABAPoBBAhSEB4!16s%2Fg%2F11h7vgpmqj?hl=en-MY&amp;entry=ttu" target="_blank" rel="noopener noreferrer">See reviews on Google Maps →</a></cite>
+        </div>
+
+        <div class="gallery__pair">
+          <div class="gallery__divider" aria-hidden="true"></div>
+          <figure class="gallery__item">
+            <div class="gallery__frame">
+              <img
+                src="mrbefoaz-Screenshot_20260707-182248.png"
+                alt="Palm trees in front of residential property"
+                width="600" height="400"
+                loading="lazy"
+                style="--gallery-zoom: 1.15; --gallery-origin-x: 48%; --gallery-origin-y: 38%; object-position: 48% 38%;"
+              >
+            </div>
+          </figure>
+          <figure class="gallery__item">
+            <div class="gallery__frame">
+              <img
+                src="mrbefo9p-Screenshot_20260707-182306.png"
+                alt="Mature palm landscaping at residential home"
+                width="600" height="400"
+                loading="lazy"
+                style="--gallery-zoom: 1.12; --gallery-origin-x: 52%; --gallery-origin-y: 32%; object-position: 52% 32%;"
+              >
+            </div>
           </figure>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact + Ghost Lead Catcher -->
-    <section id="contact" class="rf-section rf-section--alt" data-od-id="contact">
-      <div class="rf-container">
-        <p class="section-lead">Get in touch</p>
-        <h2>Request a callback</h2>
-        <p>Tell us what your yard needs. We review every message and call you back with scope, timing, and next steps — usually within one business day.</p>
-
-        <aside class="rf-ghost" role="note" data-rf-module="ghost-lead-catcher">
-          <p class="rf-ghost__mark" aria-hidden="true">&#10003;</p>
-          <p class="rf-ghost__line"><strong>We reply within one business day.</strong> If we're ever slower, Perez follows up personally  -  your message won't sit in a queue.</p>
-        </aside>
-
-        <section id="contact-day" class="rf-crm form-swap" data-rf-module="crm-sheet-connector">
-          <form id="rf-crm-form" class="rf-crm__form">
-            <div class="rf-crm__row">
-              <label>Name<input name="name" required autocomplete="name"></label>
-              <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
-            </div>
-            <label>Email<input name="email" type="email" required autocomplete="email"></label>
-            <label>What does your property need?<textarea name="message" rows="3" required placeholder="Mowing, cleanup, planting, install — and your city"></textarea></label>
-            <input type="hidden" name="source" value="website">
-            <button class="rf-btn rf-btn--primary rf-btn--lg" type="submit">Send message</button>
-            <p class="rf-crm__note" aria-live="polite" id="rf-crm-note"></p>
-          </form>
-        </section>
-
-        <section id="callback" class="rf-afterhours form-swap is-hidden" data-rf-module="callback-after-hours">
-          <p class="section-lead">Closed right now?</p>
-          <h2>Leave your info. You're first tomorrow.</h2>
-          <p class="rf-afterhours__sub">Outside business hours, drop your number below and Perez Gardening calls you back first thing — a real person, not a phone tree.</p>
-          <form id="rf-afterhours-form" class="rf-afterhours__form">
-            <input type="hidden" name="source" value="after-hours">
-            <div class="rf-afterhours__row">
-              <label>Name<input name="name" required autocomplete="name"></label>
-              <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
-            </div>
-            <label>What do you need?<textarea name="message" rows="3" required></textarea></label>
-            <label class="rf-afterhours__email">Email (optional)<input name="email" type="email" autocomplete="email"></label>
-            <button class="rf-btn rf-btn--primary rf-btn--lg" type="submit">Put me first in line</button>
-            <p class="rf-afterhours__note" aria-live="polite" id="rf-afterhours-note">Perez calls you back in the morning  -  a real person, not a phone tree.</p>
-          </form>
-        </section>
-      </div>
-    </section>
-
-    <!-- Hours & map -->
-    <section id="hours" class="rf-section" data-od-id="hours">
-      <div class="rf-container">
-        <p class="section-lead">Service area</p>
-        <h2>Hours &amp; directions</h2>
-        <div class="hours-layout">
-          <div>
-            <p><strong>Fullerton, CA 92833</strong> — Orange County and surrounding communities</p>
-            <div class="hours-grid" aria-label="Business hours">
-              <div><span>Monday</span><span>7:00am  -  7:00pm</span></div>
-              <div><span>Tuesday</span><span>7:00am  -  7:00pm</span></div>
-              <div><span>Wednesday</span><span>7:00am  -  7:00pm</span></div>
-              <div><span>Thursday</span><span>7:00am  -  7:00pm</span></div>
-              <div><span>Friday</span><span>7:00am  -  7:00pm</span></div>
-              <div><span>Saturday</span><span>7:00am  -  7:00pm</span></div>
-              <div><span>Sunday</span><span>7:00am  -  7:00pm</span></div>
-            </div>
-            <a class="map-link" href="https://www.google.com/maps/place/Perez+gardening/@34.2614476,-121.5345415,7z/data=!4m10!1m2!2m1!1sperez+gardening!3m6!1s0x80dd2b7c6fe8c503:0x40d03749469403fb!8m2!3d33.640814!4d-117.7803964!15sCg9wZXJleiBnYXJkZW5pbmdaESIPcGVyZXogZ2FyZGVuaW5nkgEIZ2FyZGVuZXKaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUmFPRTl0VlV4M0VBReABAPoBBAhSEB4!16s%2Fg%2F11h7vgpmqj?hl=en-MY&amp;entry=ttu" rel="noopener noreferrer" target="_blank">Open in Google Maps →</a>
+  <section class="trust" aria-labelledby="trust-heading">
+    <div class="container trust__inner">
+      <div class="reveal">
+        <p class="section-label">Local &amp; reachable</p>
+        <h2 class="section-title" id="trust-heading">Fullerton-based.<br>One call away.</h2>
+        <dl class="trust__facts">
+          <div class="trust__fact">
+            <dt>Area</dt>
+            <dd>Fullerton, CA 92833 — Orange County and surrounding communities</dd>
           </div>
-          <div class="map-embed" aria-label="Map showing Perez Gardening location">
-            <iframe
-              title="Perez Gardening on Google Maps"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://maps.google.com/maps?q=Perez+Gardening+Fullerton+CA&amp;hl=en&amp;z=14&amp;output=embed"
-              allowfullscreen>
-            </iframe>
+          <div class="trust__fact">
+            <dt>Services</dt>
+            <dd>Landscaping · Maintenance · Installation</dd>
           </div>
-        </div>
+          <div class="trust__fact">
+            <dt>Find us</dt>
+            <dd><a href="https://www.google.com/maps/place/Perez+gardening/@34.2614476,-121.5345415,7z/data=!4m10!1m2!2m1!1sperez+gardening!3m6!1s0x80dd2b7c6fe8c503:0x40d03749469403fb!8m2!3d33.640814!4d-117.7803964!15sCg9wZXJleiBnYXJkZW5pbmdaESIPcGVyZXogZ2FyZGVuaW5nkgEIZ2FyZGVuZXKaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUmFPRTl0VlV4M0VBReABAPoBBAhSEB4!16s%2Fg%2F11h7vgpmqj?hl=en-MY&entry=ttu" target="_blank" rel="noopener noreferrer">View on Google Maps</a></dd>
+          </div>
+        </dl>
       </div>
-    </section>
+      <aside class="trust__callout reveal">
+        <h3>Ready to start?</h3>
+        <p>Tell us what your property needs. We'll talk scope, timing, and next steps — no forms, no wait.</p>
+        <a href="tel:+17149323724" class="trust__phone">(714) 932-3724</a>
+      </aside>
+    </div>
+  </section>
 
-      <section id="contact" class="rf-ship-contact" data-rf-module="front-desk">
+    </main>
+  <section id="contact" class="rf-ship-contact" data-rf-module="front-desk">
     <div class="rf-ship-inner container">
       <p class="eyebrow section-label">Get in touch</p>
       <h2>Request a landscaping quote</h2>
@@ -1357,254 +865,52 @@
       </section>
     </div>
   </section>
-<footer class="site-footer" data-od-id="footer">
-      <div class="rf-container">
-        <p class="footer-meta rf-legal" id="rf-legal">This one-time website build is provided as-is. You own the zip/files/site forever. We never manage your domain, hosting, or payments. You are responsible for accuracy and ongoing maintenance. No performance guarantees on leads, rankings, or sales.</p>
-        <p><strong>Perez Gardening</strong>  |  Fullerton, CA</p>
-        <p>Orange County service area  |  <a href="tel:+17149323724">(714) 932-3724</a></p>
-        <p>Daily 7:00am – 7:00pm per public listings</p>
-        <p>One-time website build provided as-is. Client-owned  -  no monthly platform fee.</p>
-        <p class="footer-dev-note">Replace <code>{{CLIENT_SHEET_ENDPOINT}}</code> and <code>{{CLIENT_WEB3FORMS_KEY}}</code> before launch.</p>
-      </div>
-    </footer>
-  </main>
+<footer class="footer">
+    <p class="footer-meta rf-legal" id="rf-legal">This one-time website build is provided as-is. You own the zip/files/site forever. We never manage your domain, hosting, or payments. You are responsible for accuracy and ongoing maintenance. No performance guarantees on leads, rankings, or sales.</p>
+    <div class="container footer__inner">
+      <p class="footer__brand">Perez Gardening</p>
+      <p class="footer__meta">
+        Fullerton, California<br>
+        <a href="tel:+17149323724">(714) 932-3724</a>
+      </p>
+    </div>
+  </footer>
 
-  <a class="rf-chat-launcher" href="#contact" aria-label="Request a callback — we reply fast">
-    <span aria-hidden="true">💬</span> Request quote
-  </a>
-
-  <div class="mobile-bar" aria-label="Quick actions">
-    <a class="mobile-bar__call" href="tel:+17149323724">Call now</a>
-    <a class="mobile-bar__form" href="#contact">Message</a>
+  <div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Quick call button">
+    <a href="tel:+17149323724">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Tap to call (714) 932-3724
+    </a>
   </div>
 
   <script>
     (function () {
+      var header = document.getElementById('header');
+      var sticky = document.getElementById('stickyCta');
+      var heroBg = document.getElementById('heroBg');
+      var heroImg = heroBg && heroBg.querySelector('img');
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var motionMed = 420;
 
-      function flashNote(el, text, isError) {
-        if (!el) return;
-        el.classList.remove('rf-note-success', 'is-error');
-        el.textContent = text;
-        if (isError) {
-          el.classList.add('is-error');
-          return;
+      window.addEventListener('scroll', function () {
+        var y = window.scrollY;
+        header.classList.toggle('scrolled', y > 40);
+        sticky.classList.toggle('visible', y > 400);
+        if (!reduced && heroImg) {
+          heroImg.style.transform = 'scale(1.05) translateY(' + (y * 0.18) + 'px)';
         }
-        if (!reduced) {
-          void el.offsetWidth;
-          el.classList.add('rf-note-success');
-        }
-      }
+      }, { passive: true });
 
-      function setLoading(btn, on) {
-        if (!btn) return;
-        btn.classList.toggle('is-loading', on);
-        btn.disabled = on;
-        if (on) btn.setAttribute('aria-busy', 'true');
-        else btn.removeAttribute('aria-busy');
-      }
-
-      function swapForms(hideEl, showEl) {
-        if (!hideEl || !showEl || hideEl === showEl) return;
-        if (reduced) {
-          hideEl.classList.add('is-hidden');
-          showEl.classList.remove('is-hidden');
-          return;
-        }
-        hideEl.classList.add('is-swapping-out');
-        window.setTimeout(function () {
-          hideEl.classList.add('is-hidden');
-          hideEl.classList.remove('is-swapping-out');
-          showEl.classList.remove('is-hidden');
-          showEl.classList.add('is-swapping-in');
-          window.setTimeout(function () {
-            showEl.classList.remove('is-swapping-in');
-          }, motionMed);
-        }, motionMed);
-      }
-
-      /* Business hours  -  Pacific Time */
-      var HOURS = {
-        0: null,
-        1: { open: 8.5, close: 18 },
-        2: { open: 8.5, close: 18 },
-        3: { open: 8.5, close: 18 },
-        4: { open: 8.5, close: 18 },
-        5: { open: 8.5, close: 18 },
-        6: { open: 8.5, close: 17 }
-      };
-
-      function isOpenNow() {
-        var now = new Date();
-        var pt = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-        var day = pt.getDay();
-        var slot = HOURS[day];
-        if (!slot) return false;
-        var h = pt.getHours() + pt.getMinutes() / 60;
-        return h >= slot.open && h < slot.close;
-      }
-
-      var open = isOpenNow();
-      var dayBlock = document.getElementById('contact-day');
-      var nightBlock = document.getElementById('callback');
-      if (!open && nightBlock && dayBlock) {
-        swapForms(dayBlock, nightBlock);
-      }
-
-      /* CRM sheet-connector */
-      var crmForm = document.getElementById('rf-crm-form');
-      var crmNote = document.getElementById('rf-crm-note');
-      if (crmForm) {
-        crmForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          var submitBtn = crmForm.querySelector('button[type="submit"]');
-          var invalid = crmForm.querySelector(':invalid');
-          if (invalid) {
-            invalid.classList.add('is-invalid');
-            invalid.focus();
-            flashNote(crmNote, 'Please fill in all required fields.', true);
-            return;
-          }
-          var data = { ts: new Date().toISOString() };
-          new FormData(crmForm).forEach(function (v, k) { data[k] = v; });
-          setLoading(submitBtn, true);
-          flashNote(crmNote, '');
-          function postSheet(retries) {
-            return fetch('{{CLIENT_SHEET_ENDPOINT}}', { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) })
-              .catch(function () { if (retries > 0) return postSheet(retries - 1); });
-          }
-          var sheet = postSheet(1);
-          var email = fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              access_key: '{{CLIENT_WEB3FORMS_KEY}}',
-              subject: 'New lead - Perez\'s DK Gardening',
-              name: data.name,
-              phone: data.phone,
-              email: data.email,
-              message: data.message
-            })
-          }).catch(function () {});
-          Promise.all([sheet, email]).then(function () {
-            setLoading(submitBtn, false);
-            flashNote(crmNote, 'Thanks. We will be in touch shortly.');
-            crmForm.reset();
-          }).catch(function () {
-            setLoading(submitBtn, false);
-            flashNote(crmNote, 'Something went wrong. Please call (714) 932-3724.', true);
+      if ('IntersectionObserver' in window && !reduced) {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
           });
-        });
-        crmForm.addEventListener('input', function (e) {
-          if (e.target.classList) e.target.classList.remove('is-invalid');
-        });
-      }
-
-      /* After-hours form */
-      var ahForm = document.getElementById('rf-afterhours-form');
-      var ahNote = document.getElementById('rf-afterhours-note');
-      if (ahForm) {
-        ahForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          var submitBtn = ahForm.querySelector('button[type="submit"]');
-          var invalid = ahForm.querySelector(':invalid');
-          if (invalid) {
-            invalid.classList.add('is-invalid');
-            invalid.focus();
-            flashNote(ahNote, 'Please fill in all required fields.', true);
-            return;
-          }
-          var data = { ts: new Date().toISOString() };
-          new FormData(ahForm).forEach(function (v, k) { data[k] = v; });
-          setLoading(submitBtn, true);
-          function postSheet(retries) {
-            return fetch('{{CLIENT_SHEET_ENDPOINT}}', { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) })
-              .catch(function () { if (retries > 0) return postSheet(retries - 1); });
-          }
-          var sheet = postSheet(1);
-          var email = fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              access_key: '{{CLIENT_WEB3FORMS_KEY}}',
-              subject: 'AFTER-HOURS callback request - Perez\'s DK Gardening',
-              name: data.name,
-              phone: data.phone,
-              email: data.email || '',
-              message: data.message
-            })
-          }).catch(function () {});
-          Promise.all([sheet, email]).then(function () {
-            setLoading(submitBtn, false);
-            flashNote(ahNote, 'Got it, ' + (data.name || 'thanks') + '. You are first on the morning list.');
-            ahForm.reset();
-          }).catch(function () {
-            setLoading(submitBtn, false);
-            flashNote(ahNote, 'Something went wrong. Please call (714) 932-3724.', true);
-          });
-        });
-        ahForm.addEventListener('input', function (e) {
-          if (e.target.classList) e.target.classList.remove('is-invalid');
-        });
-      }
-
-      /* Hero entry stagger */
-      var hero = document.querySelector('.hero-stagger');
-      if (hero) {
-        if (reduced) {
-          hero.classList.add('is-ready');
-        } else {
-          requestAnimationFrame(function () {
-            requestAnimationFrame(function () { hero.classList.add('is-ready'); });
-          });
-        }
-      }
-
-      /* List stagger reveal */
-      var staggerLists = document.querySelectorAll('.stagger-list');
-      if (!reduced && 'IntersectionObserver' in window) {
-        var listIo = new IntersectionObserver(function (entries) {
-          entries.forEach(function (en) {
-            if (en.isIntersecting) {
-              en.target.classList.add('is-visible');
-              listIo.unobserve(en.target);
-            }
-          });
-        }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
-        staggerLists.forEach(function (el) { listIo.observe(el); });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
       } else {
-        staggerLists.forEach(function (el) { el.classList.add('is-visible'); });
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
       }
 
-      /* Header scroll state */
-      var header = document.querySelector('.site-header');
-      if (header && !reduced) {
-        var onScroll = function () {
-          header.classList.toggle('is-scrolled', window.scrollY > 12);
-        };
-        onScroll();
-        window.addEventListener('scroll', onScroll, { passive: true });
-      }
-
-      /* Header nav scroll spy */
-      var navLinks = document.querySelectorAll('.site-header__nav a');
-      var sections = Array.prototype.slice.call(document.querySelectorAll('main > section[id]'));
-      if (navLinks.length && sections.length && 'IntersectionObserver' in window) {
-        var activeId = '';
-        var navIo = new IntersectionObserver(function (entries) {
-          entries.forEach(function (en) {
-            if (en.isIntersecting) activeId = en.target.id;
-          });
-          navLinks.forEach(function (link) {
-            var hit = link.getAttribute('href') === '#' + activeId;
-            link.classList.toggle('is-active', hit);
-            if (hit) link.setAttribute('aria-current', 'true');
-            else link.removeAttribute('aria-current');
-          });
-        }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
-        sections.forEach(function (sec) { navIo.observe(sec); });
-      }
     })();
   </script>
 </body>
